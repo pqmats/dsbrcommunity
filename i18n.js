@@ -120,4 +120,14 @@ document.addEventListener('DOMContentLoaded', () => {
     // Handle potential dynamic content
     const observer = new MutationObserver(() => attachListeners());
     observer.observe(document.body, { childList: true, subtree: true });
+
+    // Global Click Tracer for Navbar
+    document.addEventListener('mousedown', (e) => {
+        const navbar = document.querySelector('.navbar');
+        if (navbar && navbar.contains(e.target)) {
+            console.log('i18n Trace: Mousedown inside Navbar on element:', e.target);
+            console.log('i18n Trace: Element classList:', e.target.classList.toString());
+            console.log('i18n Trace: Element Z-Index:', window.getComputedStyle(e.target).zIndex);
+        }
+    }, true); // Use capture phase
 });
