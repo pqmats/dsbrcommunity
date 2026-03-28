@@ -83,34 +83,41 @@ const i18n = {
 window.i18n = i18n;
 document.addEventListener('DOMContentLoaded', () => {
     i18n.init();
-    
-    // Add event listeners for select changes
+        // Add event listeners for select changes
     const attachListeners = () => {
         const selects = document.querySelectorAll('.lang-select');
-        console.log(`i18n: Attaching listeners to ${selects.length} selects`);
+        console.log(`i18n: Found ${selects.length} selects`);
         selects.forEach(select => {
-            // Remove old listener if any (to avoid duplicates)
-            select.removeEventListener('change', handleSelectChange);
-            select.addEventListener('change', handleSelectChange);
+            // Remove old listeners to avoid duplicates
+            select.onchange = null;
+            select.onmousedown = null;
+
+            select.onchange = (e) => {
+                console.log('i18n: Change event fired:', e.target.value);
+                i18n.switchLanguage(e.target.value);
+            };
+
+            select.onmousedown = () => {
+                console.log('i18n: Mousedown detected on select element');
+            };
+            
+            console.log('i18n: Attached direct handlers to:', select);
         });
     };
 
-    const handleSelectChange = (e) => {
-        console.log('i18n: Select change detected via direct listener:', e.target.value);
-        i18n.switchLanguage(e.target.value);
-    };
+    i18n.init().then(() => {
+        attachListeners();
+    });
 
-    attachListeners();
-    
-    // Also keep delegation as backup
+    // Backup delegation
     document.addEventListener('change', (e) => {
         if (e.target.classList.contains('lang-select')) {
-            console.log('i18n: Select change detected via delegation:', e.target.value);
+            console.log('i18n: Delegation change detected:', e.target.value);
             i18n.switchLanguage(e.target.value);
         }
     });
 
-    // Re-attach if DOM changes (optional but good for SPA-like behavior)
+    // Handle potential dynamic content
     const observer = new MutationObserver(() => attachListeners());
     observer.observe(document.body, { childList: true, subtree: true });
 });

@@ -1620,15 +1620,10 @@ p {
     cursor: pointer;
     outline: none;
     transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
-    appearance: none;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='white' viewBox='0 0 256 256'%3E%3Cpath d='M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80a8,8,0,0,1,11.32-11.32L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z'%3E%3C/path%3E%3C/svg%3E");
-    background-repeat: no-repeat;
-    background-position: right 10px center;
-    padding-right: 32px;
-    backdrop-filter: blur(10px);
-    position: relative;
-    z-index: 1001;
-    pointer-events: auto;
+    appearance: auto !important;
+    position: relative !important;
+    z-index: 9999 !important;
+    pointer-events: auto !important;
 }
 
 .lang-select:hover {
@@ -1650,11 +1645,11 @@ p {
 
 /* Header Specific Select (High Contrast) */
 .nav-select {
-    background-color: rgba(0, 0, 0, 0.05);
-    color: #000;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='black' viewBox='0 0 256 256'%3E%3Cpath d='M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80a8,8,0,0,1,11.32-11.32L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z'%3E%3C/path%3E%3C/svg%3E");
-    backdrop-filter: none;
+    background-color: #fff !important;
+    color: #000 !important;
+    border: 1px solid #ccc !important;
+    appearance: auto !important;
+    backdrop-filter: none !important;
     margin-left: 0;
     margin-right: 0;
 }
