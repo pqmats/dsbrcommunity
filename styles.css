@@ -1609,7 +1609,15 @@ p {
 
 /* ==========================================================================
    Language Select Dropdown */
-.lang-select {
+/* ==========================================================================
+   Custom Premium Language Switcher (Replacement for failing native select) */
+.custom-lang-switcher {
+    position: relative;
+    user-select: none;
+    display: inline-block;
+}
+
+.lang-current {
     background: rgba(255, 255, 255, 0.05);
     color: var(--text-primary);
     border: 1px solid rgba(255, 255, 255, 0.1);
@@ -1618,53 +1626,91 @@ p {
     font-size: 0.875rem;
     font-weight: 500;
     cursor: pointer;
-    outline: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
     transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
-    appearance: auto !important;
-    position: relative !important;
-    z-index: 9999 !important;
-    pointer-events: auto !important;
+    backdrop-filter: blur(10px);
+    width: 100px;
+    justify-content: space-between;
 }
 
-.lang-select:hover {
-    background-color: rgba(255, 255, 255, 0.1);
+.lang-current:hover {
+    background: rgba(255, 255, 255, 0.1);
     border-color: rgba(255, 255, 255, 0.2);
     transform: translateY(-1px);
 }
 
-.lang-select:focus {
-    border-color: var(--accent-light);
-    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.05);
+.lang-current::after {
+    content: '';
+    width: 0;
+    height: 0;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 4px solid currentColor;
+    transition: transform 0.2s;
 }
 
-.lang-select option {
-    background: #111;
-    color: #fff;
-    padding: 10px;
+.custom-lang-switcher.active .lang-current::after {
+    transform: rotate(180deg);
 }
 
-/* Header Specific Select (High Contrast) */
-.nav-select {
-    background-color: #fff !important;
-    color: #000 !important;
-    border: 1px solid #ccc !important;
-    appearance: auto !important;
-    backdrop-filter: none !important;
-    margin-left: 0;
-    margin-right: 0;
+.lang-dropdown {
+    position: absolute;
+    top: calc(100% + 8px);
+    right: 0;
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    padding: 6px;
+    min-width: 140px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    display: none; /* Hidden by default */
+    flex-direction: column;
+    z-index: 10000;
 }
 
-.nav-select:hover {
-    background-color: rgba(0, 0, 0, 0.08);
-    border-color: rgba(0, 0, 0, 0.2);
+.custom-lang-switcher.active .lang-dropdown {
+    display: flex;
+    animation: slideDown 0.2s ease-out;
 }
 
-.nav-select option {
-    background: #fff;
+.lang-option {
+    padding: 10px 12px;
+    font-size: 0.875rem;
+    color: #333;
+    border-radius: 6px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.2s;
+}
+
+.lang-option:hover {
+    background: rgba(0,0,0,0.05);
     color: #000;
 }
 
-.footer .lang-select {
+.lang-option.active {
+    background: #000;
+    color: #fff !important;
+}
+
+@keyframes slideDown {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Navbar Specific adjustment (High Contrast) */
+.nav-actions .lang-current {
+    background-color: #fff !important;
+    color: #000 !important;
+    border: 1px solid rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Footer Specific adjustment */
+.footer .custom-lang-switcher {
     margin-bottom: 25px;
 }
 

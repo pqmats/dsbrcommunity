@@ -3,9 +3,8 @@ const i18n = {
     translations: {},
     
     async init() {
-        console.log('i18n: Initializing...');
+        console.log('i18n: Initializing custom dropdown logic...');
         const storedLocale = localStorage.getItem('dsbr-locale') || 'pt';
-        console.log('i18n: Current locale from storage:', storedLocale);
         const success = await this.loadTranslations(storedLocale);
         if (success) {
             this.applyTranslations();
@@ -14,28 +13,25 @@ const i18n = {
     },
     
     async loadTranslations(locale) {
-        console.log(`i18n: Loading translations for ${locale}...`);
         try {
             const response = await fetch(`./locales/${locale}.json`);
             if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
             const data = await response.json();
             
-            // Only update state if data is valid
             this.translations = data;
             this.locale = locale;
             localStorage.setItem('dsbr-locale', locale);
             document.documentElement.lang = locale === 'pt' ? 'pt-BR' : 'en';
             
-            console.log(`i18n: Translations for ${locale} loaded successfully.`);
+            console.log(`i18n: ${locale} loaded.`);
             return true;
         } catch (error) {
-            console.error('i18n: Error loading translations:', error);
+            console.error('i18n: Error:', error);
             return false;
         }
     },
     
     applyTranslations() {
-        console.log(`i18n: Applying translations for ${this.locale} to DOM...`);
         const elements = document.querySelectorAll('[data-i18n]');
         elements.forEach(el => {
             const key = el.getAttribute('data-i18n');
@@ -52,8 +48,6 @@ const i18n = {
     },
     
     async switchLanguage(locale) {
-        console.log(`i18n: Switching language to ${locale}...`);
-        // Force reload even if it thinks it's the same, to be safe
         const success = await this.loadTranslations(locale);
         if (success) {
             this.applyTranslations();
@@ -62,72 +56,61 @@ const i18n = {
     },
     
     updateUI() {
-        console.log('i18n: Updating UI elements...');
-        const selects = document.querySelectorAll('.lang-select');
-        selects.forEach(select => {
-            select.value = this.locale;
-        });
+        const flag = this.locale === 'pt' ? '🇧🇷' : '🇺🇸';
+        const text = this.locale === 'pt' ? 'PT' : 'EN';
         
-        const toggles = document.querySelectorAll('.lang-toggle-btn');
-        toggles.forEach(toggle => {
-            if (toggle.getAttribute('data-lang') === this.locale) {
-                toggle.classList.add('active');
-            } else {
-                toggle.classList.remove('active');
-            }
+        // Update all custom switchers
+        document.querySelectorAll('.custom-lang-switcher').forEach(switcher => {
+            const currentFlag = switcher.querySelector('.current-flag');
+            const currentText = switcher.querySelector('.current-text');
+            if (currentFlag) currentFlag.textContent = flag;
+            if (currentText) currentText.textContent = text;
+            
+            // Mark active option
+            switcher.querySelectorAll('.lang-option').forEach(opt => {
+                if (opt.getAttribute('data-value') === this.locale) {
+                    opt.classList.add('active');
+                } else {
+                    opt.classList.remove('active');
+                }
+            });
         });
     }
 };
 
-// Expose to window for console debugging
 window.i18n = i18n;
+
 document.addEventListener('DOMContentLoaded', () => {
     i18n.init();
-        // Add event listeners for select changes
-    const attachListeners = () => {
-        const selects = document.querySelectorAll('.lang-select');
-        console.log(`i18n: Found ${selects.length} selects`);
-        selects.forEach(select => {
-            // Remove old listeners to avoid duplicates
-            select.onchange = null;
-            select.onmousedown = null;
 
-            select.onchange = (e) => {
-                console.log('i18n: Change event fired:', e.target.value);
-                i18n.switchLanguage(e.target.value);
-            };
+    // Custom Switcher Logic
+    document.addEventListener('click', (e) => {
+        // Toggle Dropdown
+        const current = e.target.closest('.lang-current');
+        if (current) {
+            const switcher = current.closest('.custom-lang-switcher');
+            // Close others
+            document.querySelectorAll('.custom-lang-switcher').forEach(s => {
+                if (s !== switcher) s.classList.remove('active');
+            });
+            switcher.classList.toggle('active');
+            return;
+        }
 
-            select.onmousedown = () => {
-                console.log('i18n: Mousedown detected on select element');
-            };
-            
-            console.log('i18n: Attached direct handlers to:', select);
-        });
-    };
+        // Selection
+        const option = e.target.closest('.lang-option');
+        if (option) {
+            const val = option.getAttribute('data-value');
+            i18n.switchLanguage(val);
+            option.closest('.custom-lang-switcher').classList.remove('active');
+            return;
+        }
 
-    i18n.init().then(() => {
-        attachListeners();
-    });
-
-    // Backup delegation
-    document.addEventListener('change', (e) => {
-        if (e.target.classList.contains('lang-select')) {
-            console.log('i18n: Delegation change detected:', e.target.value);
-            i18n.switchLanguage(e.target.value);
+        // Close when clicking outside
+        if (!e.target.closest('.custom-lang-switcher')) {
+            document.querySelectorAll('.custom-lang-switcher').forEach(s => {
+                s.classList.remove('active');
+            });
         }
     });
-
-    // Handle potential dynamic content
-    const observer = new MutationObserver(() => attachListeners());
-    observer.observe(document.body, { childList: true, subtree: true });
-
-    // Global Click Tracer for Navbar
-    document.addEventListener('mousedown', (e) => {
-        const navbar = document.querySelector('.navbar');
-        if (navbar && navbar.contains(e.target)) {
-            console.log('i18n Trace: Mousedown inside Navbar on element:', e.target);
-            console.log('i18n Trace: Element classList:', e.target.classList.toString());
-            console.log('i18n Trace: Element Z-Index:', window.getComputedStyle(e.target).zIndex);
-        }
-    }, true); // Use capture phase
 });
