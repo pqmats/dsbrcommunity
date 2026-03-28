@@ -92,10 +92,10 @@ h6 {
 }
 
 h1 {
-    font-family: 'Nehemi', var(--font-sans);
-    font-weight: normal;
-    font-size: clamp(3rem, 6vw, 5.5rem);
-    letter-spacing: -0.02em;
+  font-family: 'Nehemi', var(--font-sans);
+  font-weight: normal;
+  font-size: clamp(2.25rem, 4.5vw, 4rem);
+  letter-spacing: -0.02em;
 }
 
 h2 {
@@ -124,7 +124,7 @@ a {
 p {
     color: var(--text-secondary);
     font-size: 1.125rem;
-    max-width: 600px;
+    max-width: 800px;
     /* 10 * 60 */
 }
 
@@ -142,7 +142,7 @@ p {
 
 /* Backgrounds coded per section for future image overrides and differentiation */
 .mission-section {
-    background-color: #040404;
+    background-color: #000000;
     /* background-image: url('DEPOIS_COLOQUE_A_IMAGEM_AQUI.jpg'); */
     background-size: cover;
     background-position: center;
@@ -151,9 +151,12 @@ p {
 
 .events-section {
     background-color: #080808;
-    /* background-image: url('DEPOIS_COLOQUE_A_IMAGEM_AQUI.jpg'); */
+    background: 
+        linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 0%),
+        linear-gradient(to bottom, rgba(0, 0, 0, 0.4) 100%, #080808 0%),
+        url('assets/asteroid_remix.jpeg');
     background-size: cover;
-    background-position: center;
+    background-position: bottom;
     background-repeat: no-repeat;
 }
 
@@ -174,8 +177,7 @@ p {
 }
 
 .content-section {
-    background-color: #020202;
-    /* background-image: url('DEPOIS_COLOQUE_A_IMAGEM_AQUI.jpg'); */
+    background-color: #000000;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -778,7 +780,7 @@ p {
 .section-header {
     margin-bottom: 60px;
     /* grid adj */
-    max-width: 600px;
+    max-width: 800px;
     /* exact grid width */
 }
 
@@ -796,6 +798,7 @@ p {
 
 .section-header p {
     margin-top: 15px;
+    text-align: center;
     /* grid adj */
 }
 
@@ -1078,10 +1081,7 @@ p {
     left: 0;
     width: 100%;
     height: 100%;
-    background: 
-        linear-gradient(to right, rgba(0, 0, 0, 0.98) 0%, rgba(0, 0, 0, 0.8) 80%),
-        linear-gradient(to bottom, rgba(0, 0, 0, 0.4) 0%, #000000 100%),
-        url('assets/2151897093.jpg');
+
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
