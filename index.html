@@ -17,6 +17,7 @@
 </head>
 
 <body>
+    <script src="i18n.js"></script>
 
     <!-- Navigation -->
     <nav class="navbar reveal-nav">
@@ -26,18 +27,30 @@
                     style="height: 28px; width: auto; display: block;">
             </a>
             <div class="nav-links">
-                <a href="#mission">Comunidade</a><div class="separator" style="color: black;">//</div>
-                <a href="#events">Eventos</a><div class="separator" style="color: black;">//</div>
-                <a href="#library">Diretórios DS</a><div class="separator" style="color: black;">//</div>
-                <a href="#jobs">Jobs (Em breve)</a><div class="separator" style="color: black;">//</div>
-                <a href="#join">Newsletter (Em breve)</a>
+                <a href="#mission" data-i18n="nav_community">Comunidade</a>
+                <a href="#events" data-i18n="nav_events">Eventos</a>
+                <a href="#library" data-i18n="nav_library">Diretórios DS</a>
+                <a href="#jobs" data-i18n="nav_jobs">Jobs (Em breve)</a>
+                <a href="#join" data-i18n="nav_newsletter">Newsletter (Em breve)</a>
             </div>
-            <a href="https://discord.gg/EjxdKtSK89" target="_blank" class="btn btn-primary nav-cta">
-                <svg fill="currentColor" viewBox="0 0 256 256">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M524.5 133.8C524.3 133.5 524.1 133.2 523.7 133.1C485.6 115.6 445.3 103.1 404 96C403.6 95.9 403.2 96 402.9 96.1C402.6 96.2 402.3 96.5 402.1 96.9C396.6 106.8 391.6 117.1 387.2 127.5C342.6 120.7 297.3 120.7 252.8 127.5C248.3 117 243.3 106.8 237.7 96.9C237.5 96.6 237.2 96.3 236.9 96.1C236.6 95.9 236.2 95.9 235.8 95.9C194.5 103 154.2 115.5 116.1 133C115.8 133.1 115.5 133.4 115.3 133.7C39.1 247.5 18.2 358.6 28.4 468.2C28.4 468.5 28.5 468.7 28.6 469C28.7 469.3 28.9 469.4 29.1 469.6C73.5 502.5 123.1 527.6 175.9 543.8C176.3 543.9 176.7 543.9 177 543.8C177.3 543.7 177.7 543.4 177.9 543.1C189.2 527.7 199.3 511.3 207.9 494.3C208 494.1 208.1 493.8 208.1 493.5C208.1 493.2 208.1 493 208 492.7C207.9 492.4 207.8 492.2 207.6 492.1C207.4 492 207.2 491.8 206.9 491.7C191.1 485.6 175.7 478.3 161 469.8C160.7 469.6 160.5 469.4 160.3 469.2C160.1 469 160 468.6 160 468.3C160 468 160 467.7 160.2 467.4C160.4 467.1 160.5 466.9 160.8 466.7C163.9 464.4 167 462 169.9 459.6C170.2 459.4 170.5 459.2 170.8 459.2C171.1 459.2 171.5 459.2 171.8 459.3C268 503.2 372.2 503.2 467.3 459.3C467.6 459.2 468 459.1 468.3 459.1C468.6 459.1 469 459.3 469.2 459.5C472.1 461.9 475.2 464.4 478.3 466.7C478.5 466.9 478.7 467.1 478.9 467.4C479.1 467.7 479.1 468 479.1 468.3C479.1 468.6 479 468.9 478.8 469.2C478.6 469.5 478.4 469.7 478.2 469.8C463.5 478.4 448.2 485.7 432.3 491.6C432.1 491.7 431.8 491.8 431.6 492C431.4 492.2 431.3 492.4 431.2 492.7C431.1 493 431.1 493.2 431.1 493.5C431.1 493.8 431.2 494 431.3 494.3C440.1 511.3 450.1 527.6 461.3 543.1C461.5 543.4 461.9 543.7 462.2 543.8C462.5 543.9 463 543.9 463.3 543.8C516.2 527.6 565.9 502.5 610.4 469.6C610.6 469.4 610.8 469.2 610.9 469C611 468.8 611.1 468.5 611.1 468.2C623.4 341.4 590.6 231.3 524.2 133.7zM222.5 401.5C193.5 401.5 169.7 374.9 169.7 342.3C169.7 309.7 193.1 283.1 222.5 283.1C252.2 283.1 275.8 309.9 275.3 342.3C275.3 375 251.9 401.5 222.5 401.5zM417.9 401.5C388.9 401.5 365.1 374.9 365.1 342.3C365.1 309.7 388.5 283.1 417.9 283.1C447.6 283.1 471.2 309.9 470.7 342.3C470.7 375 447.5 401.5 417.9 401.5z"/></svg>
-                </svg>
-                Participar da comunidade
-            </a>
+
+            <div class="nav-actions">
+                <select class="lang-select nav-select">
+                    <option value="pt">🇧🇷 PT</option>
+                    <option value="en">🇺🇸 EN</option>
+                </select>
+
+                <a href="https://discord.gg/EjxdKtSK89" target="_blank" class="btn btn-primary nav-cta"
+                    data-i18n="nav_join_btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"
+                        style="width: 20px; height: 20px; fill: currentColor;">
+                        <path
+                            d="M524.5 133.8C524.3 133.5 524.1 133.2 523.7 133.1C485.6 115.6 445.3 103.1 404 96C403.6 95.9 403.2 96 402.9 96.1C402.6 96.2 402.3 96.5 402.1 96.9C396.6 106.8 391.6 117.1 387.2 127.5C342.6 120.7 297.3 120.7 252.8 127.5C248.3 117 243.3 106.8 237.7 96.9C237.5 96.6 237.2 96.3 236.9 96.1C236.6 95.9 236.2 95.9 235.8 95.9C194.5 103 154.2 115.5 116.1 133C115.8 133.1 115.5 133.4 115.3 133.7C39.1 247.5 18.2 358.6 28.4 468.2C28.4 468.5 28.5 468.7 28.6 469C28.7 469.3 28.9 469.4 29.1 469.6C73.5 502.5 123.1 527.6 175.9 543.8C176.3 543.9 176.7 543.9 177 543.8C177.3 543.7 177.7 543.4 177.9 543.1C189.2 527.7 199.3 511.3 207.9 494.3C208 494.1 208.1 493.8 208.1 493.5C208.1 493.2 208.1 493 208 492.7C207.9 492.4 207.8 492.2 207.6 492.1C207.4 492 207.2 491.8 206.9 491.7C191.1 485.6 175.7 478.3 161 469.8C160.7 469.6 160.5 469.4 160.3 469.2C160.1 469 160 468.6 160 468.3C160 468 160 467.7 160.2 467.4C160.4 467.1 160.5 466.9 160.8 466.7C163.9 464.4 167 462 169.9 459.6C170.2 459.4 170.5 459.2 170.8 459.2C171.1 459.2 171.5 459.2 171.8 459.3C268 503.2 372.2 503.2 467.3 459.3C467.6 459.2 468 459.1 468.3 459.1C468.6 459.1 469 459.3 469.2 459.5C472.1 461.9 475.2 464.4 478.3 466.7C478.5 466.9 478.7 467.1 478.9 467.4C479.1 467.7 479.1 468 479.1 468.3C479.1 468.6 479 468.9 478.8 469.2C478.6 469.5 478.4 469.7 478.2 469.8C463.5 478.4 448.2 485.7 432.3 491.6C432.1 491.7 431.8 491.8 431.6 492C431.4 492.2 431.3 492.4 431.2 492.7C431.1 493 431.1 493.2 431.1 493.5C431.1 493.8 431.2 494 431.3 494.3C440.1 511.3 450.1 527.6 461.3 543.1C461.5 543.4 461.9 543.7 462.2 543.8C462.5 543.9 463 543.9 463.3 543.8C516.2 527.6 565.9 502.5 610.4 469.6C610.6 469.4 610.8 469.2 610.9 469C611 468.8 611.1 468.5 611.1 468.2C623.4 341.4 590.6 231.3 524.2 133.7zM222.5 401.5C193.5 401.5 169.7 374.9 169.7 342.3C169.7 309.7 193.1 283.1 222.5 283.1C252.2 283.1 275.8 309.9 275.3 342.3C275.3 375 251.9 401.5 222.5 401.5zM417.9 401.5C388.9 401.5 365.1 374.9 365.1 342.3C365.1 309.7 388.5 283.1 417.9 283.1C447.6 283.1 471.2 309.9 470.7 342.3C470.7 375 447.5 401.5 417.9 401.5z" />
+                    </svg>
+                    Comunidade
+                </a>
+            </div>
+
         </div>
     </nav>
 
@@ -48,20 +61,22 @@
             <div class="orb orb-2"></div>
         </div>
         <div class="hero-content reveal">
-            <div class="badge fade-up">✦ Criado por Designer para Designers ✦</div>
-            <h1 class="fade-up delay-1">Onde profissionais constroem, <br>evoluem e <b>escalam Design Systems</b>.</h1>
-            <p class="fade-up delay-2" style="margin: 20px 0 60px;">
-            Um espaço para profissionais de produto, design e desenvolvimento trocarem experiências reais, enfrentarem desafios práticos e evoluírem Design Systems que funcionam em escala.
+            <div class="badge fade-up" data-i18n="hero_badge">✦ Criado por Designer para Designers ✦</div>
+            <h1 class="fade-up delay-1" data-i18n="hero_title" data-i18n-html>Onde profissionais constroem, <br>evoluem
+                e <b>escalam Design Systems</b>.</h1>
+            <p class="fade-up delay-2" style="margin: 20px 0 60px;" data-i18n="hero_description">
+                Um espaço para profissionais de produto, design e desenvolvimento trocarem experiências reais,
+                enfrentarem desafios práticos e evoluírem Design Systems que funcionam em escala.
             </p>
 
 
             <div class="cta-group fade-up delay-3">
-                <a href="https://discord.gg/EjxdKtSK89" target="_blank" class="btn btn-primary">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M524.5 133.8C524.3 133.5 524.1 133.2 523.7 133.1C485.6 115.6 445.3 103.1 404 96C403.6 95.9 403.2 96 402.9 96.1C402.6 96.2 402.3 96.5 402.1 96.9C396.6 106.8 391.6 117.1 387.2 127.5C342.6 120.7 297.3 120.7 252.8 127.5C248.3 117 243.3 106.8 237.7 96.9C237.5 96.6 237.2 96.3 236.9 96.1C236.6 95.9 236.2 95.9 235.8 95.9C194.5 103 154.2 115.5 116.1 133C115.8 133.1 115.5 133.4 115.3 133.7C39.1 247.5 18.2 358.6 28.4 468.2C28.4 468.5 28.5 468.7 28.6 469C28.7 469.3 28.9 469.4 29.1 469.6C73.5 502.5 123.1 527.6 175.9 543.8C176.3 543.9 176.7 543.9 177 543.8C177.3 543.7 177.7 543.4 177.9 543.1C189.2 527.7 199.3 511.3 207.9 494.3C208 494.1 208.1 493.8 208.1 493.5C208.1 493.2 208.1 493 208 492.7C207.9 492.4 207.8 492.2 207.6 492.1C207.4 492 207.2 491.8 206.9 491.7C191.1 485.6 175.7 478.3 161 469.8C160.7 469.6 160.5 469.4 160.3 469.2C160.1 469 160 468.6 160 468.3C160 468 160 467.7 160.2 467.4C160.4 467.1 160.5 466.9 160.8 466.7C163.9 464.4 167 462 169.9 459.6C170.2 459.4 170.5 459.2 170.8 459.2C171.1 459.2 171.5 459.2 171.8 459.3C268 503.2 372.2 503.2 467.3 459.3C467.6 459.2 468 459.1 468.3 459.1C468.6 459.1 469 459.3 469.2 459.5C472.1 461.9 475.2 464.4 478.3 466.7C478.5 466.9 478.7 467.1 478.9 467.4C479.1 467.7 479.1 468 479.1 468.3C479.1 468.6 479 468.9 478.8 469.2C478.6 469.5 478.4 469.7 478.2 469.8C463.5 478.4 448.2 485.7 432.3 491.6C432.1 491.7 431.8 491.8 431.6 492C431.4 492.2 431.3 492.4 431.2 492.7C431.1 493 431.1 493.2 431.1 493.5C431.1 493.8 431.2 494 431.3 494.3C440.1 511.3 450.1 527.6 461.3 543.1C461.5 543.4 461.9 543.7 462.2 543.8C462.5 543.9 463 543.9 463.3 543.8C516.2 527.6 565.9 502.5 610.4 469.6C610.6 469.4 610.8 469.2 610.9 469C611 468.8 611.1 468.5 611.1 468.2C623.4 341.4 590.6 231.3 524.2 133.7zM222.5 401.5C193.5 401.5 169.7 374.9 169.7 342.3C169.7 309.7 193.1 283.1 222.5 283.1C252.2 283.1 275.8 309.9 275.3 342.3C275.3 375 251.9 401.5 222.5 401.5zM417.9 401.5C388.9 401.5 365.1 374.9 365.1 342.3C365.1 309.7 388.5 283.1 417.9 283.1C447.6 283.1 471.2 309.9 470.7 342.3C470.7 375 447.5 401.5 417.9 401.5z"/></svg>
+                <a href="https://discord.gg/EjxdKtSK89" target="_blank" class="btn btn-primary"
+                    data-i18n="hero_join_btn">
                     Fazer parte da comunidade
                 </a>
-                <a href="#events" class="btn btn-secondary">
-                    <svg fill="currentColor" viewBox="0 0 256 256">
+                <a href="#events" class="btn btn-secondary" data-i18n="hero_meetups_btn">
+                    <svg fill="currentColor" viewBox="0 0 256 256" style="width: 20px; height: 20px;">
                         <path
                             d="M208,32H184V24a8,8,0,0,0-16,0v8H88V24a8,8,0,0,0-16,0v8H48A16,16,0,0,0,32,48V208a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V48A16,16,0,0,0,208,32ZM72,48v8a8,8,0,0,0,16,0V48h80v8a8,8,0,0,0,16,0V48h24V80H48V48Zm136,160H48V96H208V208Z">
                         </path>
@@ -108,32 +123,40 @@
         </div>
     </section>
 
-    <!-- Mission & Community -->
     <section id="mission" class="section mission-section">
         <div class="container layout-asymmetric">
             <div class="mission-text reveal left">
-                <h2>O propósito por trás da comunidade</h2>
-                <p>A DSBr surgiu com a finalidade de ser um espaço para profissionais de produto, design e desenvolvimento trocarem experiências reais, resolverem desafios práticos, evoluirem profissionalmente e fazerem networking.</p>
+                <h2 data-i18n="mission_title">O propósito por trás da comunidade</h2>
+                <p data-i18n="mission_description">A DSBr surgiu com a finalidade de ser um espaço para profissionais de
+                    produto, design e
+                    desenvolvimento trocarem experiências reais, resolverem desafios práticos, evoluirem
+                    profissionalmente e fazerem networking.</p>
                 <ul class="mission-bullets">
                     <li>
                         <div class="bullet-icon">✦</div>
                         <div>
-                            <h4>Troca na prática</h4>
-                            <p>Compartilhamos desafios reais, decisões difíceis e soluções que funcionam no contexto de produto, negócio e tecnologia sem romantizar o processo.</p>
+                            <h4 data-i18n="mission_bullet_1_title">Troca na prática</h4>
+                            <p data-i18n="mission_bullet_1_description">Compartilhamos desafios reais, decisões difíceis
+                                e soluções que funcionam no contexto de
+                                produto, negócio e tecnologia sem romantizar o processo.</p>
                         </div>
                     </li>
                     <li>
                         <div class="bullet-icon">✦</div>
                         <div>
-                            <h4>Colaboração de Verdade</h4>
-                            <p>Aproximamos design, produto e desenvolvimento para construir juntos, com diálogo aberto, respeito técnico e responsabilidade compartilhada.</p>
+                            <h4 data-i18n="mission_bullet_2_title">Colaboração de Verdade</h4>
+                            <p data-i18n="mission_bullet_2_description">Aproximamos design, produto e desenvolvimento
+                                para construir juntos, com diálogo aberto,
+                                respeito técnico e responsabilidade compartilhada.</p>
                         </div>
                     </li>
                     <li>
                         <div class="bullet-icon">✦</div>
                         <div>
-                            <h4>Ambiente seguro</h4>
-                            <p>Criamos um espaço acolhedor para perguntas, discussões em diferentes níveis de maturidade, porque aprender faz parte de qualquer jornada profissional.</p>
+                            <h4 data-i18n="mission_bullet_3_title">Ambiente seguro</h4>
+                            <p data-i18n="mission_bullet_3_description">Criamos um espaço acolhedor para perguntas,
+                                discussões em diferentes níveis de
+                                maturidade, porque aprender faz parte de qualquer jornada profissional.</p>
                         </div>
                     </li>
                 </ul>
@@ -150,8 +173,8 @@
     <!-- Events Section -->
     <section id="events" class="section events-section">
         <div class="container header-flex reveal">
-            <h2>Meetups da Comunidade</h2>
-            <a href="#" class="link-arrow">Ver agenda completa <span>→</span></a>
+            <h2 data-i18n="events_title">Meetups da Comunidade</h2>
+            <a href="#" class="link-arrow" data-i18n="events_agenda_link">Ver agenda completa <span>→</span></a>
         </div>
 
         <div class="container reveal delay-1"
@@ -163,13 +186,15 @@
                 </div>
                 <div class="event-details">
                     <div class="event-meta">
-                        <span class="date">01 Jun ✦ Palco Discord</span>
-                        <span class="tag">Online</span>
+                        <span class="date" data-i18n="event_1_date">01 Jun ✦ Palco Discord</span>
+                        <span class="tag" data-i18n="event_1_tag">Online</span>
                     </div>
-                    <h3>Primeiro encontro online da DSBr 🤟🏻</h3>
-                    <p>Um encontro informal para abrir a comunidade, apresentar a DSBr, alinhar expectativas e criar conexões. Sem palestra, sem conteúdo técnico, só conversa, e muito networking.
+                    <h3 data-i18n="event_1_title">Primeiro encontro online da DSBr 🤟🏻</h3>
+                    <p data-i18n="event_1_description">Um encontro informal para abrir a comunidade, apresentar a DSBr,
+                        alinhar expectativas e criar
+                        conexões. Sem palestra, sem conteúdo técnico, só conversa, e muito networking.
                     </p>
-                    <a href="#" target="_blank" class="btn-text">Participar conosco</a>
+                    <a href="#" target="_blank" class="btn-text" data-i18n="event_btn">Participar conosco</a>
                 </div>
             </div>
 
@@ -179,12 +204,15 @@
                 </div>
                 <div class="event-details">
                     <div class="event-meta">
-                        <span class="date">08 Jun ✦ Palco Discord</span>
-                        <span class="tag">Online</span>
+                        <span class="date" data-i18n="event_2_date">08 Jun ✦ Palco Discord</span>
+                        <span class="tag" data-i18n="event_2_tag">Online</span>
                     </div>
-                    <h3>Design Systems na prática</h3>
-                    <p>Uma conversa prática sobre como Design Systems aparecem no dia a dia de quem trabalha com produto e design. O que esperar, como começar, onde normalmente surgem dúvidas e quais são os erros mais comuns no caminho.</p>
-                    <a href="#" target="_blank" class="btn-text">Participar conosco</a>
+                    <h3 data-i18n="event_2_title">Design Systems na prática</h3>
+                    <p data-i18n="event_2_description">Uma conversa prática sobre como Design Systems aparecem no dia a
+                        dia de quem trabalha com produto
+                        e design. O que esperar, como começar, onde normalmente surgem dúvidas e quais são os erros mais
+                        comuns no caminho.</p>
+                    <a href="#" target="_blank" class="btn-text" data-i18n="event_btn">Participar conosco</a>
                 </div>
             </div>
 
@@ -194,12 +222,15 @@
                 </div>
                 <div class="event-details">
                     <div class="event-meta">
-                        <span class="date">15 Jun ✦ Palco Discord</span>
-                        <span class="tag">Online</span>
+                        <span class="date" data-i18n="event_3_date">15 Jun ✦ Palco Discord</span>
+                        <span class="tag" data-i18n="event_3_tag">Online</span>
                     </div>
-                    <h3>Design Tokens não são ferramenta</h3>
-                    <p>Antes de Figma Variables, antes de JSON, antes do código. Uma conversa sobre decisões conceituais, responsabilidades e acordos de time que precisam existir antes de qualquer implementação de tokens.</p>
-                    <a href="#" target="_blank" class="btn-text">Participar conosco</a>
+                    <h3 data-i18n="event_3_title">Design Tokens não são ferramenta</h3>
+                    <p data-i18n="event_3_description">Antes de Figma Variables, antes de JSON, antes do código. Uma
+                        conversa sobre decisões
+                        conceituais, responsabilidades e acordos de time que precisam existir antes de qualquer
+                        implementação de tokens.</p>
+                    <a href="#" target="_blank" class="btn-text" data-i18n="event_btn">Participar conosco</a>
                 </div>
             </div>
 
@@ -210,41 +241,44 @@
     <section id="library" class="section library-section">
         <div class="container reveal">
             <div class="section-header center">
-                <h2>Biblioteca de <b>Design Systems</b> para benchmarking.</h2>
-                <p>Explore Design Systems usados em produtos reais para estudar decisões, entender padrões e ampliar seu repertório junto com a comunidade.</p>
+                <h2 data-i18n="library_title" data-i18n-html>Biblioteca de <b>Design Systems</b> para benchmarking.</h2>
+                <p data-i18n="library_description">Explore Design Systems usados em produtos reais para estudar
+                    decisões, entender padrões e ampliar seu
+                    repertório junto com a comunidade.</p>
             </div>
 
             <div class="ds-grid">
-                <!-- Google -->
                 <a href="https://m3.material.io/" target="_blank" class="ds-card dynamic-hover reveal delay-2">
                     <div class="ds-header">
                         <div class="ds-logo" style="background:#4285F4;color:#fff;border-color:#4285F4;">M</div>
-                        <h3>Material 3 (Google)</h3>
+                        <h3 data-i18n="library_card_1_title">Material 3 (Google)</h3>
                     </div>
                     <div class="ds-content">
-                        <p>O framework open-source global definido pela adoção unificada no sistema Android e web.</p>
+                        <p data-i18n="library_card_1_description">O framework open-source global definido pela adoção
+                            unificada no sistema Android e web.</p>
                     </div>
                 </a>
 
-                <!-- Shopify -->
-                <a href="https://polaris-react.shopify.com/" target="_blank" class="ds-card dynamic-hover reveal delay-3">
+                <a href="https://polaris-react.shopify.com/" target="_blank"
+                    class="ds-card dynamic-hover reveal delay-3">
                     <div class="ds-header">
                         <div class="ds-logo" style="background:#95BF47;color:#fff;border-color:#95BF47;">P</div>
-                        <h3>Polaris (Shopify)</h3>
+                        <h3 data-i18n="library_card_2_title">Polaris (Shopify)</h3>
                     </div>
                     <div class="ds-content">
-                        <p>O principal e mais respeitado ecossistema open-source focado inteiramente em e-commerce.</p>
+                        <p data-i18n="library_card_2_description">O principal e mais respeitado ecossistema open-source
+                            focado inteiramente em e-commerce.</p>
                     </div>
                 </a>
 
-                <!-- IBM -->
                 <a href="https://carbondesignsystem.com/" target="_blank" class="ds-card dynamic-hover reveal delay-4">
                     <div class="ds-header">
                         <div class="ds-logo" style="background:#0F62FE;color:#fff;border-color:#0F62FE;">C</div>
-                        <h3>Carbon (IBM)</h3>
+                        <h3 data-i18n="library_card_3_title">Carbon (IBM)</h3>
                     </div>
                     <div class="ds-content">
-                        <p>O clássico sistema de governança modular que guia todos os hardwares e softwares Cloud da
+                        <p data-i18n="library_card_3_description">O clássico sistema de governança modular que guia
+                            todos os hardwares e softwares Cloud da
                             IBM.</p>
                     </div>
                 </a>
@@ -257,7 +291,7 @@
                             d="M128,24A104,104,0,0,0,95.06,226.71c5.2,1,7.11-2.25,7.11-5s-.09-9-.14-17.65c-28.94,6.29-35-13.93-35-13.93-4.73-12-11.55-15.22-11.55-15.22-9.45-6.45,.71-6.32,.71-6.32,10.43,.73,15.93,10.72,15.93,10.72,9.27,15.89,24.31,11.3,30.25,8.64,1-6.72,3.64-11.3,6.54-13.9-23.1-2.63-47.41-11.56-47.41-51.46,0-11.37,4.06-20.67,10.74-27.95-1.07-2.63-4.66-13.22,1-27.56,0,0,8.75-2.8,28.66,10.68,8.32-2.31,17.22-3.47,26.06-3.51,8.83,.04,17.74,1.2,26.07,3.51,19.89-13.48,28.63-10.68,28.63-10.68,5.69,14.34,2.1,24.93,1.02,27.56,6.7,7.28,10.72,16.58,10.72,27.95,0,39.99-24.36,48.81-47.53,51.38,3.74,3.22,7.07,9.58,7.07,19.3,0,13.95-.13,25.17-.13,28.59,0,2.77,1.87,6.04,7.16,5.01A104,104,0,0,0,128,24Z">
                         </path>
                     </svg>
-                    Ver o diretório Github completo
+                    <span data-i18n="library_github_btn">Ver o diretório Github completo</span>
                 </a>
             </div>
         </div>
@@ -286,7 +320,7 @@
                 </div>
             </div>
 
-        <div class="jobs-list" style="width: 100%; margin-top: 20px;">
+            <div class="jobs-list" style="width: 100%; margin-top: 20px;">
                 <a href="job-details" class="job-item featured dynamic-hover"
                     style="border-left: 4px solid var(--accent-color); padding-right: 20px; text-decoration: none;">
                     <div class="job-company-logo" style="background:#000;color:#fff;">U</div>
@@ -333,13 +367,12 @@
         </div>
     </section>-->
 
-    <!-- Content / Talks -->
     <section id="content" class="section content-section">
         <div class="container reveal">
             <div class="section-header center">
-                <div class="badge fade-up">✦ Primeiro encontro presencial ✦</div>
-                <h2>Eventos presenciais</h2>
-               
+                <div class="badge fade-up" data-i18n="content_badge">✦ Primeiro encontro presencial ✦</div>
+                <h2 data-i18n="content_events_title">Eventos presenciais</h2>
+
             </div>
 
             <div class="talk-showcase dynamic-hover" style="text-align: left;">
@@ -347,79 +380,54 @@
                     <button class="play-btn" style="z-index: 10;">▶</button>
                 </div>
                 <div class="talk-info">
-                    <div class="talk-meta" style="display: flex; gap: 15px; font-size: 0.875rem; color: var(--text-secondary);">
-                        <span class="date">20 Jun 2024</span>
-                        <span class="talk-tag">Local: À definir</span>
+                    <div class="talk-meta"
+                        style="display: flex; gap: 15px; font-size: 0.875rem; color: var(--text-secondary);">
+                        <span class="date" data-i18n="content_event_date">20 Jun 2024</span>
+                        <span class="talk-tag" data-i18n="content_event_location">Local: À definir</span>
                     </div>
-                    <h3>Primeiro encontro presencial da comunidade</h3>
-                    <p>Um encontro leve para nos conhecermos, trocar ideias e fortalecer a comunidade. Aberto para profissionais de produto, desenvolvimento e áreas relacionadas.</p>
+                    <h3 data-i18n="content_event_title">Primeiro encontro presencial da comunidade</h3>
+                    <p data-i18n="content_event_description">Um encontro leve para nos conhecermos, trocar ideias e
+                        fortalecer a comunidade. Aberto para
+                        profissionais de produto, desenvolvimento e áreas relacionadas.</p>
                     <!-- <div class="speaker">
                         <div class="avatar small"></div>
                         <span><strong>Matt</strong>, Product Designer.</span>
                     </div>-->
-                    <a href="https://luma.com/tvkhbenq" target="_blank" class="btn-text" style="width: fit-content;">Marque sua presença</a>
+                    <a href="https://luma.com/tvkhbenq" target="_blank" class="btn-text" style="width: fit-content;"
+                        data-i18n="content_event_btn">Marque sua presença</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Newsletter / Join Strip -->
     <section id="join" class="section strip-section">
         <div class="strip-bg"></div>
         <div class="container reveal relative z-10 layout-centered">
-            <h2>Venha fazer parte da comunidade</h2>
-            <p style="margin: 15px 0 0; max-width: 650px;">Um espaço para pessoas interessadas em design de produto e desenvolvimento trocarem experiências, tirarem dúvidas e evoluírem juntas. Participe da comunidade no Discord e acompanhe nossos conteúdos pela newsletter semanal na Substack.</p>
+            <h2 data-i18n="join_title">Venha fazer parte da comunidade</h2>
+            <p style="margin: 15px 0 0; max-width: 650px;" data-i18n="join_description">Um espaço para pessoas
+                interessadas em design de produto e
+                desenvolvimento trocarem experiências, tirarem dúvidas e evoluírem juntas. Participe da comunidade no
+                Discord e acompanhe nossos conteúdos pela newsletter semanal na Substack.</p>
 
             <div class="cta-group" style="margin-top: 60px; margin-bottom: 0;">
                 <a href="https://discord.gg/EjxdKtSK89" target="_blank" class="btn btn-primary">
-                    <svg fill="currentColor" viewBox="0 0 256 256">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M524.5 133.8C524.3 133.5 524.1 133.2 523.7 133.1C485.6 115.6 445.3 103.1 404 96C403.6 95.9 403.2 96 402.9 96.1C402.6 96.2 402.3 96.5 402.1 96.9C396.6 106.8 391.6 117.1 387.2 127.5C342.6 120.7 297.3 120.7 252.8 127.5C248.3 117 243.3 106.8 237.7 96.9C237.5 96.6 237.2 96.3 236.9 96.1C236.6 95.9 236.2 95.9 235.8 95.9C194.5 103 154.2 115.5 116.1 133C115.8 133.1 115.5 133.4 115.3 133.7C39.1 247.5 18.2 358.6 28.4 468.2C28.4 468.5 28.5 468.7 28.6 469C28.7 469.3 28.9 469.4 29.1 469.6C73.5 502.5 123.1 527.6 175.9 543.8C176.3 543.9 176.7 543.9 177 543.8C177.3 543.7 177.7 543.4 177.9 543.1C189.2 527.7 199.3 511.3 207.9 494.3C208 494.1 208.1 493.8 208.1 493.5C208.1 493.2 208.1 493 208 492.7C207.9 492.4 207.8 492.2 207.6 492.1C207.4 492 207.2 491.8 206.9 491.7C191.1 485.6 175.7 478.3 161 469.8C160.7 469.6 160.5 469.4 160.3 469.2C160.1 469 160 468.6 160 468.3C160 468 160 467.7 160.2 467.4C160.4 467.1 160.5 466.9 160.8 466.7C163.9 464.4 167 462 169.9 459.6C170.2 459.4 170.5 459.2 170.8 459.2C171.1 459.2 171.5 459.2 171.8 459.3C268 503.2 372.2 503.2 467.3 459.3C467.6 459.2 468 459.1 468.3 459.1C468.6 459.1 469 459.3 469.2 459.5C472.1 461.9 475.2 464.4 478.3 466.7C478.5 466.9 478.7 467.1 478.9 467.4C479.1 467.7 479.1 468 479.1 468.3C479.1 468.6 479 468.9 478.8 469.2C478.6 469.5 478.4 469.7 478.2 469.8C463.5 478.4 448.2 485.7 432.3 491.6C432.1 491.7 431.8 491.8 431.6 492C431.4 492.2 431.3 492.4 431.2 492.7C431.1 493 431.1 493.2 431.1 493.5C431.1 493.8 431.2 494 431.3 494.3C440.1 511.3 450.1 527.6 461.3 543.1C461.5 543.4 461.9 543.7 462.2 543.8C462.5 543.9 463 543.9 463.3 543.8C516.2 527.6 565.9 502.5 610.4 469.6C610.6 469.4 610.8 469.2 610.9 469C611 468.8 611.1 468.5 611.1 468.2C623.4 341.4 590.6 231.3 524.2 133.7zM222.5 401.5C193.5 401.5 169.7 374.9 169.7 342.3C169.7 309.7 193.1 283.1 222.5 283.1C252.2 283.1 275.8 309.9 275.3 342.3C275.3 375 251.9 401.5 222.5 401.5zM417.9 401.5C388.9 401.5 365.1 374.9 365.1 342.3C365.1 309.7 388.5 283.1 417.9 283.1C447.6 283.1 471.2 309.9 470.7 342.3C470.7 375 447.5 401.5 417.9 401.5z"/></svg>
-                </svg>
-                    Entrar no Discord da comunidade
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"
+                        style="width: 20px; height: 20px; fill: currentColor; margin-right: 8px;">
+                        <path
+                            d="M524.5 133.8C524.3 133.5 524.1 133.2 523.7 133.1C485.6 115.6 445.3 103.1 404 96C403.6 95.9 403.2 96 402.9 96.1C402.6 96.2 402.3 96.5 402.1 96.9C396.6 106.8 391.6 117.1 387.2 127.5C342.6 120.7 297.3 120.7 252.8 127.5C248.3 117 243.3 106.8 237.7 96.9C237.5 96.6 237.2 96.3 236.9 96.1C236.6 95.9 236.2 95.9 235.8 95.9C194.5 103 154.2 115.5 116.1 133C115.8 133.1 115.5 133.4 115.3 133.7C39.1 247.5 18.2 358.6 28.4 468.2C28.4 468.5 28.5 468.7 28.6 469C28.7 469.3 28.9 469.4 29.1 469.6C73.5 502.5 123.1 527.6 175.9 543.8C176.3 543.9 176.7 543.9 177 543.8C177.3 543.7 177.7 543.4 177.9 543.1C189.2 527.7 199.3 511.3 207.9 494.3C208 494.1 208.1 493.8 208.1 493.5C208.1 493.2 208.1 493 208 492.7C207.9 492.4 207.8 492.2 207.6 492.1C207.4 492 207.2 491.8 206.9 491.7C191.1 485.6 175.7 478.3 161 469.8C160.7 469.6 160.5 469.4 160.3 469.2C160.1 469 160 468.6 160 468.3C160 468 160 467.7 160.2 467.4C160.4 467.1 160.5 466.9 160.8 466.7C163.9 464.4 167 462 169.9 459.6C170.2 459.4 170.5 459.2 170.8 459.2C171.1 459.2 171.5 459.2 171.8 459.3C268 503.2 372.2 503.2 467.3 459.3C467.6 459.2 468 459.1 468.3 459.1C468.6 459.1 469 459.3 469.2 459.5C472.1 461.9 475.2 464.4 478.3 466.7C478.5 466.9 478.7 467.1 478.9 467.4C479.1 467.7 479.1 468 479.1 468.3C479.1 468.6 479 468.9 478.8 469.2C478.6 469.5 478.4 469.7 478.2 469.8C463.5 478.4 448.2 485.7 432.3 491.6C432.1 491.7 431.8 491.8 431.6 492C431.4 492.2 431.3 492.4 431.2 492.7C431.1 493 431.1 493.2 431.1 493.5C431.1 493.8 431.2 494 431.3 494.3C440.1 511.3 450.1 527.6 461.3 543.1C461.5 543.4 461.9 543.7 462.2 543.8C462.5 543.9 463 543.9 463.3 543.8C516.2 527.6 565.9 502.5 610.4 469.6C610.6 469.4 610.8 469.2 610.9 469C611 468.8 611.1 468.5 611.1 468.2C623.4 341.4 590.6 231.3 524.2 133.7zM222.5 401.5C193.5 401.5 169.7 374.9 169.7 342.3C169.7 309.7 193.1 283.1 222.5 283.1C252.2 283.1 275.8 309.9 275.3 342.3C275.3 375 251.9 401.5 222.5 401.5zM417.9 401.5C388.9 401.5 365.1 374.9 365.1 342.3C365.1 309.7 388.5 283.1 417.9 283.1C447.6 283.1 471.2 309.9 470.7 342.3C470.7 375 447.5 401.5 417.9 401.5z" />
+                    </svg>
+                    <span data-i18n="join_discord_btn">Entrar no Discord da comunidade</span>
                 </a>
                 <a href="https://figmatt.substack.com/" target="_blank" rel="noopener noreferrer"
                     class="btn btn-secondary"
-                    style="border-radius: 100px; display: inline-flex; align-items: center; justify-content: center; padding: 15px 30px; font-weight: 400; font-size: 1rem; cursor: pointer; transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1); background: rgba(255, 255, 255, 0.05); color: var(--text-primary); border: 1px solid rgba(255, 255, 255, 0.08); backdrop-filter: blur(10px);">
+                    style="border-radius: 100px; display: inline-flex; align-items: center; justify-content: center; padding: 15px 30px; font-weight: 400; font-size: 1rem; cursor: pointer; transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1); background: rgba(255, 255, 255, 0.05); color: var(--text-primary); border: 1px solid rgba(255, 255, 255, 0.08); backdrop-filter: blur(10px);"
+                    data-i18n="join_newsletter_btn">
                     Acessar a Newsletter
                 </a>
             </div>
         </div>
     </section>
 
-    <!-- Partners Marquee -->
-    <section class="marquee-section">
-        <div class="marquee-mask"></div>
-        <div class="marquee-track">
-            <span>Design System</span> <i>✦</i>
-            <span>UI Design</span> <i>✦</i>
-            <span>UX Design</span> <i>✦</i>
-            <span>Product Design</span> <i>✦</i>
-            <span>UX Writing</span> <i>✦</i>
-            <span>UX Research</span> <i>✦</i>
-            <span>Accessibility</span> <i>✦</i>
-            <span>Design Ops</span> <i>✦</i>
-            <span>Architecture</span> <i>✦</i>
-            <span>Documentation</span> <i>✦</i>
-            <span>Design Tokens</span> <i>✦</i>
-            <span>React</span> <i>✦</i>
-            <span>Figma</span> <i>✦</i>
-        </div>
-        <div class="marquee-track">
-            <span>Design System</span> <i>✦</i>
-            <span>UI Design</span> <i>✦</i>
-            <span>UX Design</span> <i>✦</i>
-            <span>Product Design</span> <i>✦</i>
-            <span>UX Writing</span> <i>✦</i>
-            <span>UX Research</span> <i>✦</i>
-            <span>Accessibility</span> <i>✦</i>
-            <span>Design Ops</span> <i>✦</i>
-            <span>Architecture</span> <i>✦</i>
-            <span>Documentation</span> <i>✦</i>
-            <span>Design Tokens</span> <i>✦</i>
-            <span>React</span> <i>✦</i>
-            <span>Figma</span> <i>✦</i>
-        </div>
-    </section>
 
     <!-- Footer -->
     <footer class="footer">
@@ -429,12 +437,20 @@
                     <img src="assets/logos/LOGO-DSBR-white.png" alt="DSBr Logo"
                         style="height: 50px; width: auto; display: block;">
                 </a>
-                <p style="color: var(--text-secondary); line-height: 1.6; font-size: 1rem; margin-bottom: 25px;">
+                <p style="color: var(--text-secondary); line-height: 1.6; font-size: 1rem; margin-bottom: 25px;"
+                    data-i18n="footer_description">
 
-                    Um espaço para profissionais de produto, design e desenvolvimento trocarem experiências reais, resolverem desafios práticos e evoluírem Design Systems que funcionam em escala.
+                    Um espaço para profissionais de produto, design e desenvolvimento trocarem experiências reais,
+                    resolverem desafios práticos e evoluírem Design Systems que funcionam em escala.
                 </p>
+
+                <select class="lang-select">
+                    <option value="pt">🇧🇷 PT</option>
+                    <option value="en">🇺🇸 EN</option>
+                </select>
                 <div class="footer-socials" style="display: flex; gap: 15px;">
-                    <a href="https://www.linkedin.com/in/matheus-de-souza-francisco/" target="_blank" aria-label="LinkedIn"
+                    <a href="https://www.linkedin.com/in/matheus-de-souza-francisco/" target="_blank"
+                        aria-label="LinkedIn"
                         style="color: var(--text-secondary); width: 40px; height: 40px; border-radius: 50%; background: rgba(255,255,255,0.05); display: flex; align-items: center; justify-content: center; transition: all 0.3s ease;"
                         onmouseover="this.style.background='rgba(255,255,255,0.1)'; this.style.color='var(--text-primary)';"
                         onmouseout="this.style.background='rgba(255,255,255,0.05)'; this.style.color='var(--text-secondary)';">
@@ -469,32 +485,37 @@
 
             <div class="footer-links">
                 <div class="link-col">
-                    <h4>Comunidade</h4>
-                    <a href="#">Código de Conduta</a>
-                    <a href="#">Manifesto DSBr</a>
-                    <a href="#">Governança</a>
-                    <a href="#">Patrocinadores</a>
-                    <a href="#">Gumroad</a>
+                    <h4 data-i18n="footer_col_1_title">Comunidade</h4>
+                    <a href="#" data-i18n="footer_col_1_link_1">Código de Conduta</a>
+                    <a href="#" data-i18n="footer_col_1_link_2">Manifesto DSBr</a>
+                    <a href="#" data-i18n="footer_col_1_link_3">Governança</a>
+                    <a href="#" data-i18n="footer_col_1_link_4">Patrocinadores</a>
+                    <a href="#" data-i18n="footer_col_1_link_5">Gumroad</a>
                 </div>
                 <div class="link-col">
-                    <h4>Ecossistema</h4>
-                    <a href="#">Galeria</a>
-                    <a href="#">Vagas</a>
-                    <a href="#">Newsletter </a>
-                    <a href="#">Propor Palestra</a>
+                    <h4 data-i18n="footer_col_2_title">Ecossistema</h4>
+                    <a href="#" data-i18n="footer_col_2_link_1">Galeria</a>
+                    <a href="#" data-i18n="footer_col_2_link_2">Vagas</a>
+                    <a href="#" data-i18n="footer_col_2_link_3">Newsletter </a>
+                    <a href="#" data-i18n="footer_col_2_link_4">Propor Palestra</a>
                 </div>
                 <div class="link-col">
-                    <h4>Social</h4>
-                    <a href="https://discord.gg/EjxdKtSK89" target="_blank">Discord Community</a>
-                    <a href="https://www.linkedin.com/in/matheus-de-souza-francisco/" target="_blank">LinkedIn </a>
-                    <a href="https://www.instagram.com/figmatt.design/" target="_blank">Instagram</a>
-                    <a href="https://www.youtube.com/@dsbr.design" target="_blank">YouTube</a>
-                    <a href="https://open.spotify.com/playlist/3YJl6BQey0hCfYLOIGNHfm?si=24bc56969a5d4913" target="_blank">Spotify</a>
+                    <h4 data-i18n="footer_col_3_title">Social</h4>
+                    <a href="https://discord.gg/EjxdKtSK89" target="_blank" data-i18n="footer_col_3_link_1">Discord
+                        Community</a>
+                    <a href="https://www.linkedin.com/in/matheus-de-souza-francisco/" target="_blank"
+                        data-i18n="footer_col_3_link_2">LinkedIn </a>
+                    <a href="https://www.instagram.com/figmatt.design/" target="_blank"
+                        data-i18n="footer_col_3_link_3">Instagram</a>
+                    <a href="https://www.youtube.com/@dsbr.design" target="_blank"
+                        data-i18n="footer_col_3_link_4">YouTube</a>
+                    <a href="https://open.spotify.com/playlist/3YJl6BQey0hCfYLOIGNHfm?si=24bc56969a5d4913"
+                        target="_blank" data-i18n="footer_col_3_link_5">Spotify</a>
                 </div>
             </div>
         </div>
         <div class="container footer-bottom">
-            <p>&copy; 2026 DSBr Community. Todos os direitos reservados.</p>
+            <p data-i18n="footer_copyright">&copy; 2026 DSBr Community. Todos os direitos reservados.</p>
         </div>
     </footer>
 
