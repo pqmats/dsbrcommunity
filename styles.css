@@ -1626,6 +1626,9 @@ p {
     background-position: right 10px center;
     padding-right: 32px;
     backdrop-filter: blur(10px);
+    position: relative;
+    z-index: 1001;
+    pointer-events: auto;
 }
 
 .lang-select:hover {

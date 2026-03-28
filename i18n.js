@@ -81,15 +81,36 @@ const i18n = {
 
 // Expose to window for console debugging
 window.i18n = i18n;
-
 document.addEventListener('DOMContentLoaded', () => {
     i18n.init();
     
     // Add event listeners for select changes
+    const attachListeners = () => {
+        const selects = document.querySelectorAll('.lang-select');
+        console.log(`i18n: Attaching listeners to ${selects.length} selects`);
+        selects.forEach(select => {
+            // Remove old listener if any (to avoid duplicates)
+            select.removeEventListener('change', handleSelectChange);
+            select.addEventListener('change', handleSelectChange);
+        });
+    };
+
+    const handleSelectChange = (e) => {
+        console.log('i18n: Select change detected via direct listener:', e.target.value);
+        i18n.switchLanguage(e.target.value);
+    };
+
+    attachListeners();
+    
+    // Also keep delegation as backup
     document.addEventListener('change', (e) => {
         if (e.target.classList.contains('lang-select')) {
-            console.log('i18n: Select change detected:', e.target.value);
+            console.log('i18n: Select change detected via delegation:', e.target.value);
             i18n.switchLanguage(e.target.value);
         }
     });
+
+    // Re-attach if DOM changes (optional but good for SPA-like behavior)
+    const observer = new MutationObserver(() => attachListeners());
+    observer.observe(document.body, { childList: true, subtree: true });
 });
