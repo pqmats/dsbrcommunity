@@ -138,6 +138,7 @@ p {
 .section {
     padding: var(--section-padding);
     position: relative;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
 }
 
 /* Backgrounds coded per section for future image overrides and differentiation */
@@ -299,7 +300,7 @@ p {
 
 .nav-links {
     display: flex;
-    gap: 30px;
+    gap: 10px;
     /* grid adj */
 }
 
@@ -310,7 +311,7 @@ p {
 }
 
 .nav-links a:hover {
-    color: rgba(0, 0, 0, 1);
+    color: rgba(0, 0, 0, 2);
 }
 
 .nav-cta {
