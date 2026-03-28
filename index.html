@@ -54,7 +54,6 @@
                     Comunidade
                 </a>
             </div>
-
         </div>
     </nav>
 
@@ -448,10 +447,20 @@
                     resolverem desafios práticos e evoluírem Design Systems que funcionam em escala.
                 </p>
 
-                <select class="lang-select">
-                    <option value="pt">🇧🇷 PT</option>
-                    <option value="en">🇺🇸 EN</option>
-                </select>
+                <div class="custom-lang-switcher" id="footerLangSwitcher">
+                    <div class="lang-current">
+                        <span class="current-flag">🇧🇷</span>
+                        <span class="current-text">PT</span>
+                    </div>
+                    <div class="lang-dropdown">
+                        <div class="lang-option active" data-value="pt">
+                            <span>🇧🇷</span> PT
+                        </div>
+                        <div class="lang-option" data-value="en">
+                            <span>🇺🇸</span> EN
+                        </div>
+                    </div>
+                </div>
                 <div class="footer-socials" style="display: flex; gap: 15px;">
                     <a href="https://www.linkedin.com/in/matheus-de-souza-francisco/" target="_blank"
                         aria-label="LinkedIn"

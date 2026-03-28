@@ -1,9 +1,10 @@
 const i18n = {
     locale: 'pt',
     translations: {},
+    version: '1.2', // Cache buster version
     
     async init() {
-        console.log('i18n: Initializing custom dropdown logic...');
+        console.log('i18n: Starting initialization v' + this.version);
         const storedLocale = localStorage.getItem('dsbr-locale') || 'pt';
         const success = await this.loadTranslations(storedLocale);
         if (success) {
@@ -13,8 +14,12 @@ const i18n = {
     },
     
     async loadTranslations(locale) {
+        // ALWAYS use absolute path from root and a cache buster
+        const url = `/locales/${locale}.json?v=${this.version}`;
+        console.log(`i18n: Fetching ${url}`);
+        
         try {
-            const response = await fetch(`./locales/${locale}.json`);
+            const response = await fetch(url);
             if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
             const data = await response.json();
             
@@ -23,10 +28,10 @@ const i18n = {
             localStorage.setItem('dsbr-locale', locale);
             document.documentElement.lang = locale === 'pt' ? 'pt-BR' : 'en';
             
-            console.log(`i18n: ${locale} loaded.`);
+            console.log(`i18n: Load success for ${locale}`);
             return true;
         } catch (error) {
-            console.error('i18n: Error:', error);
+            console.error('i18n: Load FAILED:', error);
             return false;
         }
     },
@@ -48,10 +53,12 @@ const i18n = {
     },
     
     async switchLanguage(locale) {
+        console.log(`i18n: Switching to -> ${locale}`);
         const success = await this.loadTranslations(locale);
         if (success) {
             this.applyTranslations();
             this.updateUI();
+            console.log('i18n: Switch complete');
         }
     },
     
@@ -59,14 +66,12 @@ const i18n = {
         const flag = this.locale === 'pt' ? '🇧🇷' : '🇺🇸';
         const text = this.locale === 'pt' ? 'PT' : 'EN';
         
-        // Update all custom switchers
         document.querySelectorAll('.custom-lang-switcher').forEach(switcher => {
             const currentFlag = switcher.querySelector('.current-flag');
             const currentText = switcher.querySelector('.current-text');
             if (currentFlag) currentFlag.textContent = flag;
             if (currentText) currentText.textContent = text;
             
-            // Mark active option
             switcher.querySelectorAll('.lang-option').forEach(opt => {
                 if (opt.getAttribute('data-value') === this.locale) {
                     opt.classList.add('active');
@@ -83,13 +88,11 @@ window.i18n = i18n;
 document.addEventListener('DOMContentLoaded', () => {
     i18n.init();
 
-    // Custom Switcher Logic
     document.addEventListener('click', (e) => {
-        // Toggle Dropdown
+        // Toggle
         const current = e.target.closest('.lang-current');
         if (current) {
             const switcher = current.closest('.custom-lang-switcher');
-            // Close others
             document.querySelectorAll('.custom-lang-switcher').forEach(s => {
                 if (s !== switcher) s.classList.remove('active');
             });
@@ -101,12 +104,14 @@ document.addEventListener('DOMContentLoaded', () => {
         const option = e.target.closest('.lang-option');
         if (option) {
             const val = option.getAttribute('data-value');
+            console.log('i18n: Option selected:', val);
             i18n.switchLanguage(val);
-            option.closest('.custom-lang-switcher').classList.remove('active');
+            const switcher = option.closest('.custom-lang-switcher');
+            if (switcher) switcher.classList.remove('active');
             return;
         }
 
-        // Close when clicking outside
+        // Close outside
         if (!e.target.closest('.custom-lang-switcher')) {
             document.querySelectorAll('.custom-lang-switcher').forEach(s => {
                 s.classList.remove('active');
