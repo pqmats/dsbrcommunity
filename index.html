@@ -19,6 +19,14 @@
 <body>
     <script src="i18n.js"></script>
 
+    <!-- Announcement Bar -->
+    <div class="announcement-bar">
+        <div class="container bar-content">
+            <span data-i18n="banner_text">Apoie a comunidade dsbr.design e nos ajude a crescer! ☕️</span>
+            <a href="https://buymeacoffee.com/dsbrcommunity" target="_blank" class="bar-link" data-i18n="banner_link">Apoiar agora</a>
+        </div>
+    </div>
+
     <!-- Navigation -->
     <nav class="navbar reveal-nav">
         <div class="nav-container">
@@ -403,22 +411,24 @@
         </div>
     </section>
 
-    <section id="plugin" class="section plugin-section">
-        <div class="container layout-asymmetric">
-            <div class="mission-image-wrapper reveal left"
-                style="display: flex; align-items: center; justify-content: center; width: 100%;">
-                <div class="abstract-content-art" style="width: 100%; height: 320px; border-radius: var(--radius-lg); background: linear-gradient(135deg, #1a1a1a, #000); display: flex; align-items: center; justify-content: center; border: var(--border-subtle);">
-                    <img src="assets/logos/LOGO-ICON-WHITE.png" alt="Plugin Icon" style="width: 120px; height: auto; opacity: 0.8;">
+    <section id="plugin" class="section plugin-section-v2">
+        <div class="container">
+            <div class="plugin-content-v2 reveal">
+                <div class="plugin-text-v2">
+                    <div class="badge fade-up" data-i18n="plugin_subtitle">O Plugin oficial da nossa comunidade</div>
+                    <h2 class="fade-up delay-1" data-i18n="plugin_title">Design System Analyze</h2>
+                    <p class="fade-up delay-2" data-i18n="plugin_description">Analise seu Design System, identifique falhas de acessibilidade, inconsistências e exporte tokens no formato Tokens Studio (JSON) com apenas um clique.</p>
+                    <div class="cta-group fade-up delay-3" style="justify-content: flex-start; margin-top: 30px;">
+                        <a href="https://www.figma.com/community/plugin/1351658428172036494" target="_blank" class="btn btn-primary" data-i18n="plugin_btn">
+                            Instalar no Figma
+                        </a>
+                    </div>
                 </div>
-            </div>
-            <div class="mission-text reveal right">
-                <div class="badge" data-i18n="plugin_subtitle">O Plugin oficial da nossa comunidade</div>
-                <h2 data-i18n="plugin_title">Design System Analyze</h2>
-                <p data-i18n="plugin_description">Analise seu Design System, identifique falhas de acessibilidade, inconsistências e exporte tokens no formato Tokens Studio (JSON) com apenas um clique.</p>
-                <div class="cta-group" style="justify-content: flex-start; margin-top: 30px;">
-                    <a href="https://www.figma.com/community/plugin/1351658428172036494" target="_blank" class="btn btn-primary" data-i18n="plugin_btn">
-                        Instalar no Figma
-                    </a>
+                <div class="plugin-image-v2 fade-up delay-1">
+                    <div class="plugin-frame">
+                        <img src="assets/plugin-ui.png" alt="Design System Analyzer UI">
+                        <div class="frame-glow"></div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -519,6 +529,17 @@
                                 d="M164.44,121.34l-48-32A8,8,0,0,0,104,96v64a8,8,0,0,0,12.44,6.66l48-32a8,8,0,0,0,0-13.32ZM120,145.05V111l25.58,17ZM234.33,69.52a24,24,0,0,0-14.49-16.4C185.56,39.88,131,40,128,40s-57.56-.12-91.84,13.15a24,24,0,0,0-14.49,16.4C19.86,76.62,16,102.57,16,128s3.86,51.38,5.67,58.48a24,24,0,0,0,14.49,16.41C69.48,216,125.13,216,128,216s58.52,0,91.84-13.11a24,24,0,0,0,14.49-16.41C236.14,179.38,240,153.43,240,128S236.14,76.62,234.33,69.52ZM218.83,182.5A8,8,0,0,1,214,188c-30.86,11.83-84.34,12-86,12s-55.12-.13-86-12a8,8,0,0,1-4.83-5.46C35.53,176.62,32,152.05,32,128s3.53-48.62,5.13-54.54A8,8,0,0,1,42,68c30.86-11.83,84.34-12,86-12s55.12,.13,86,12a8,8,0,0,1,4.83,5.46C220.47,79.38,224,103.95,224,128S220.47,176.62,218.83,182.5Z">
                             </path>
                         </svg>
+                    </a>
+                </div>
+                <div class="footer-bmac" style="margin-top: 30px;">
+                    <a href="https://buymeacoffee.com/dsbrcommunity" target="_blank" class="btn btn-secondary"
+                        style="width: 100%; justify-content: center; gap: 10px; border-radius: 12px; background: rgba(255, 230, 0, 0.1); color: #ffe600; border: 1px solid rgba(255, 230, 0, 0.2);">
+                        <svg viewBox="0 0 256 256" width="20" height="20" fill="currentColor">
+                            <path
+                                d="M208,80H176V48a16,16,0,0,0-16-16H40A16,16,0,0,0,24,48V176a48,48,0,0,0,48,48h72a48,48,0,0,0,48-48V160h16a32,32,0,0,0,32-32V112A32,32,0,0,0,208,80Zm-16,96a32,32,0,0,1-32,32H72a32,32,0,0,1-32-32V48H160V176Zm48-48a16,16,0,0,1-16,16H192V96h16a16,16,0,0,1,16,16Z">
+                            </path>
+                        </svg>
+                        <span data-i18n="bmac_btn">Buy me a coffee</span>
                     </a>
                 </div>
             </div>

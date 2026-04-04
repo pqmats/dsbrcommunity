@@ -103,5 +103,7 @@
   "plugin_description": "Analyze your Design System, identify accessibility flaws, inconsistencies and export tokens in Tokens Studio format (JSON) with just one click.",
   "plugin_btn": "Install on Figma",
   "bmac_text": "Support the community",
-  "bmac_btn": "Buy me a coffee"
+  "bmac_btn": "Buy me a coffee",
+  "banner_text": "Support the dsbr.design community and help us grow! ☕️",
+  "banner_link": "Support now"
 }

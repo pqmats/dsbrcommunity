@@ -184,11 +184,56 @@ p {
     background-repeat: no-repeat;
 }
 
-.plugin-section {
-    background-color: #050505;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+.plugin-section-v2 {
+    background: radial-gradient(circle at 100% 50%, rgba(66, 133, 244, 0.08) 0%, #000 60%);
+    padding: 120px 0;
+}
+
+.plugin-content-v2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+}
+
+.plugin-frame {
+    position: relative;
+    border-radius: 24px;
+    padding: 12px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 40px 80px -20px rgba(0,0,0,0.8);
+    transition: transform 0.3s ease;
+}
+
+.plugin-frame:hover {
+    transform: translateY(-10px);
+}
+
+.plugin-frame img {
+    width: 100%;
+    height: auto;
+    border-radius: 16px;
+    display: block;
+}
+
+.frame-glow {
+    position: absolute;
+    inset: -30px;
+    background: radial-gradient(circle, rgba(66, 133, 244, 0.12) 0%, transparent 70%);
+    z-index: -1;
+    border-radius: 60px;
+}
+
+@media (max-width: 991px) {
+    .plugin-content-v2 {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 60px;
+    }
+    .cta-group {
+        justify-content: center !important;
+    }
 }
 
 .mt-4 {
@@ -279,7 +324,7 @@ p {
    ========================================================================== */
 .navbar {
     position: fixed;
-    top: 0;
+    top: 40px;
     left: 0;
     width: 100%;
     height: var(--nav-height);
@@ -287,6 +332,37 @@ p {
     backdrop-filter: blur(15px);
     z-index: 100;
     border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    transition: top 0.3s ease;
+}
+
+/* Announcement Bar */
+.announcement-bar {
+    height: 40px;
+    background: #000;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 101;
+    font-size: 0.875rem;
+}
+
+.bar-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+}
+
+.bar-link {
+    font-weight: 700;
+    text-decoration: underline !important;
+    color: #fff;
 }
 
 .nav-container {
