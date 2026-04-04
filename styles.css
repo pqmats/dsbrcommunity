@@ -338,7 +338,7 @@ p {
 /* Announcement Bar */
 .announcement-bar {
     height: 40px;
-    background: #000;
+    background: linear-gradient(90deg, #6a11cb 0%, #2575fc 100%);
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     color: #fff;
     display: flex;
