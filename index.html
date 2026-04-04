@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="dark-theme">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DSBr | Uma comunidade para quem constrói Design Systems</title>
+    <meta name="description"
+        content="Uma casa para especialistas em Design Systems, UX engineers e product designers que estruturam e escalam as interfaces digitais no Brasil.">
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@500;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="icon" type="image/png" href="assets/logos/LOGO-DSBR-FAVICON.png">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <script src="i18n.js"></script>
+
+    <!-- Navigation -->
+    <nav class="navbar reveal-nav">
+        <div class="nav-container">
+            <a href="#" class="logo" style="display: flex; align-items: center; text-decoration: none;">
+                <img src="assets/logos/LOGO-DSBR-black.png" alt="DSBr Logo"
+                    style="height: 28px; width: auto; display: block;">
+            </a>
+            <div class="nav-links">
+                <a href="#mission" data-i18n="nav_community">Comunidade</a>
+                <a href="#events" data-i18n="nav_events">Eventos</a>
+                <a href="#library" data-i18n="nav_library">Diretórios DS</a>
+                <a href="#join" data-i18n="nav_newsletter">Newsletter (Em breve)</a>
+            </div>
+
+            <div class="nav-actions">
+                <!-- <div class="custom-lang-switcher" id="navLangSwitcher">
+                    <div class="lang-current">
+                        <span class="current-flag">🇧🇷</span>
+                        <span class="current-text">PT</span>
+                    </div>
+                    <div class="lang-dropdown">
+                        <div class="lang-option active" data-value="pt">
+                            <span>🇧🇷</span> PT
+                        </div>
+                        <div class="lang-option" data-value="en">
+                            <span>🇺🇸</span> EN
+                        </div>
+                    </div>
+                </div> -->
+
+                <a href="https://discord.gg/EjxdKtSK89" target="_blank" class="btn btn-primary nav-cta"
+                    data-i18n="nav_join_btn">
+                    Comunidade
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-bg">
+            <div class="orb orb-1"></div>
+            <div class="orb orb-2"></div>
+        </div>
+        <div class="hero-content reveal">
+            <div class="badge fade-up" data-i18n="hero_badge">✦ Criado por Designer para Designers ✦</div>
+            <h1 class="fade-up delay-1" data-i18n="hero_title" data-i18n-html>Onde profissionais constroem, <br>evoluem
+                e <b>escalam Design Systems</b>.</h1>
+            <p class="fade-up delay-2" style="margin: 20px 0 60px;" data-i18n="hero_description">
+                Um espaço para profissionais de produto, design e desenvolvimento trocarem experiências reais,
+                enfrentarem desafios práticos e evoluírem Design Systems que funcionam em escala.
+            </p>
+
+
+            <div class="cta-group fade-up delay-3">
+                <a href="https://discord.gg/EjxdKtSK89" target="_blank" class="btn btn-primary"
+                    data-i18n="hero_join_btn">
+                    Fazer parte da comunidade
+                </a>
+                <a href="#events" class="btn btn-secondary" data-i18n="hero_meetups_btn">
+                    <svg fill="currentColor" viewBox="0 0 256 256" style="width: 20px; height: 20px;">
+                        <path
+                            d="M208,32H184V24a8,8,0,0,0-16,0v8H88V24a8,8,0,0,0-16,0v8H48A16,16,0,0,0,32,48V208a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V48A16,16,0,0,0,208,32ZM72,48v8a8,8,0,0,0,16,0V48h80v8a8,8,0,0,0,16,0V48h24V80H48V48Zm136,160H48V96H208V208Z">
+                        </path>
+                    </svg>
+                    Ver próximos meetups
+                </a>
+            </div>
+        </div>
+
+    </header>
+
+    <!-- Partners Marquee -->
+    <section class="marquee-section">
+        <div class="marquee-mask"></div>
+        <div class="marquee-track">
+            <span>Design System</span> <i>✦</i>
+            <span>UI Design</span> <i>✦</i>
+            <span>UX Design</span> <i>✦</i>
+            <span>Product Design</span> <i>✦</i>
+            <span>UX Writing</span> <i>✦</i>
+            <span>UX Research</span> <i>✦</i>
+            <span>Accessibility</span> <i>✦</i>
+            <span>Design Ops</span> <i>✦</i>
+            <span>Architecture</span> <i>✦</i>
+            <span>Documentation</span> <i>✦</i>
+            <span>Design Tokens</span> <i>✦</i>
+            <span>React</span> <i>✦</i>
+            <span>Figma</span> <i>✦</i>
+        </div>
+        <div class="marquee-track">
+            <span>Design System</span> <i>✦</i>
+            <span>UI Design</span> <i>✦</i>
+            <span>UX Design</span> <i>✦</i>
+            <span>Product Design</span> <i>✦</i>
+            <span>UX Writing</span> <i>✦</i>
+            <span>UX Research</span> <i>✦</i>
+            <span>Accessibility</span> <i>✦</i>
+            <span>Design Ops</span> <i>✦</i>
+            <span>Architecture</span> <i>✦</i>
+            <span>Documentation</span> <i>✦</i>
+            <span>Design Tokens</span> <i>✦</i>
+            <span>React</span> <i>✦</i>
+            <span>Figma</span> <i>✦</i>
+        </div>
+    </section>
+
+    <section id="mission" class="section mission-section">
+        <div class="container layout-asymmetric">
+            <div class="mission-text reveal left">
+                <h2 data-i18n="mission_title">O propósito por trás da comunidade</h2>
+                <p data-i18n="mission_description">A DSBr surgiu com a finalidade de ser um espaço para profissionais de
+                    produto, design e
+                    desenvolvimento trocarem experiências reais, resolverem desafios práticos, evoluirem
+                    profissionalmente e fazerem networking.</p>
+                <ul class="mission-bullets">
+                    <li>
+                        <div class="bullet-icon">✦</div>
+                        <div>
+                            <h4 data-i18n="mission_bullet_1_title">Troca na prática</h4>
+                            <p data-i18n="mission_bullet_1_description">Compartilhamos desafios reais, decisões difíceis
+                                e soluções que funcionam no contexto de
+                                produto, negócio e tecnologia sem romantizar o processo.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="bullet-icon">✦</div>
+                        <div>
+                            <h4 data-i18n="mission_bullet_2_title">Colaboração de Verdade</h4>
+                            <p data-i18n="mission_bullet_2_description">Aproximamos design, produto e desenvolvimento
+                                para construir juntos, com diálogo aberto,
+                                respeito técnico e responsabilidade compartilhada.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="bullet-icon">✦</div>
+                        <div>
+                            <h4 data-i18n="mission_bullet_3_title">Ambiente seguro</h4>
+                            <p data-i18n="mission_bullet_3_description">Criamos um espaço acolhedor para perguntas,
+                                discussões em diferentes níveis de
+                                maturidade, porque aprender faz parte de qualquer jornada profissional.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="mission-image-wrapper reveal right"
+                style="display: flex; align-items: center; justify-content: center; width: 100%;">
+                <img src="assets/matt.png" alt="DSBr Favicon"
+                    style="width: 320px; height: auto; object-fit: contain;  opacity: 1;">
+            </div>
+        </div>
+    </section>
+
+    <!-- Events Section -->
+    <section id="events" class="section events-section">
+        <div class="container header-flex reveal">
+            <h2 data-i18n="events_title">Meetups da Comunidade</h2>
+            <a href="#" class="link-arrow" data-i18n="events_agenda_link">Ver agenda completa <span>→</span></a>
+        </div>
+
+        <div class="container reveal delay-1"
+            style="display: flex; justify-content: center; gap: 30px; padding-bottom: 60px; overflow-x: auto;">
+
+            <div class="event-card dynamic-hover">
+                <div class="event-image">
+                    <img src="assets/cover1.png" alt="Tech Innovation Summit 2024">
+                </div>
+                <div class="event-details">
+                    <div class="event-meta">
+                        <span class="date" data-i18n="event_1_date">01 Jun ✦ Palco Discord</span>
+                        <span class="tag" data-i18n="event_1_tag">Online</span>
+                    </div>
+                    <h3 data-i18n="event_1_title">Primeiro encontro online da DSBr 🤟🏻</h3>
+                    <p data-i18n="event_1_description">Um encontro informal para abrir a comunidade, apresentar a DSBr,
+                        alinhar expectativas e criar
+                        conexões. Sem palestra, sem conteúdo técnico, só conversa, e muito networking.
+                    </p>
+                    <a href="#" target="_blank" class="btn-text" data-i18n="event_btn">Participar conosco</a>
+                </div>
+            </div>
+
+            <div class="event-card dynamic-hover">
+                <div class="event-image">
+                    <img src="assets/cover2.png" alt="Harmonizing Design Systems">
+                </div>
+                <div class="event-details">
+                    <div class="event-meta">
+                        <span class="date" data-i18n="event_2_date">08 Jun ✦ Palco Discord</span>
+                        <span class="tag" data-i18n="event_2_tag">Online</span>
+                    </div>
+                    <h3 data-i18n="event_2_title">Design Systems na prática</h3>
+                    <p data-i18n="event_2_description">Uma conversa prática sobre como Design Systems aparecem no dia a
+                        dia de quem trabalha com produto
+                        e design. O que esperar, como começar, onde normalmente surgem dúvidas e quais são os erros mais
+                        comuns no caminho.</p>
+                    <a href="#" target="_blank" class="btn-text" data-i18n="event_btn">Participar conosco</a>
+                </div>
+            </div>
+
+            <div class="event-card dynamic-hover">
+                <div class="event-image">
+                    <img src="assets/cover3.png" alt="Harmonizing Design Systems">
+                </div>
+                <div class="event-details">
+                    <div class="event-meta">
+                        <span class="date" data-i18n="event_3_date">15 Jun ✦ Palco Discord</span>
+                        <span class="tag" data-i18n="event_3_tag">Online</span>
+                    </div>
+                    <h3 data-i18n="event_3_title">Design Tokens não são ferramenta</h3>
+                    <p data-i18n="event_3_description">Antes de Figma Variables, antes de JSON, antes do código. Uma
+                        conversa sobre decisões
+                        conceituais, responsabilidades e acordos de time que precisam existir antes de qualquer
+                        implementação de tokens.</p>
+                    <a href="#" target="_blank" class="btn-text" data-i18n="event_btn">Participar conosco</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Design System Library -->
+    <section id="library" class="section library-section">
+        <div class="container reveal">
+            <div class="section-header center">
+                <h2 data-i18n="library_title" data-i18n-html>Biblioteca de <b>Design Systems</b> para benchmarking.</h2>
+                <p data-i18n="library_description">Explore Design Systems usados em produtos reais para estudar
+                    decisões, entender padrões e ampliar seu
+                    repertório junto com a comunidade.</p>
+            </div>
+
+            <div class="ds-grid">
+                <a href="https://m3.material.io/" target="_blank" class="ds-card dynamic-hover reveal delay-2">
+                    <div class="ds-header">
+                        <div class="ds-logo" style="background:#4285F4;color:#fff;border-color:#4285F4;">M</div>
+                        <h3 data-i18n="library_card_1_title">Material 3 (Google)</h3>
+                    </div>
+                    <div class="ds-content">
+                        <p data-i18n="library_card_1_description">O framework open-source global definido pela adoção
+                            unificada no sistema Android e web.</p>
+                    </div>
+                </a>
+
+                <a href="https://polaris-react.shopify.com/" target="_blank"
+                    class="ds-card dynamic-hover reveal delay-3">
+                    <div class="ds-header">
+                        <div class="ds-logo" style="background:#95BF47;color:#fff;border-color:#95BF47;">P</div>
+                        <h3 data-i18n="library_card_2_title">Polaris (Shopify)</h3>
+                    </div>
+                    <div class="ds-content">
+                        <p data-i18n="library_card_2_description">O principal e mais respeitado ecossistema open-source
+                            focado inteiramente em e-commerce.</p>
+                    </div>
+                </a>
+
+                <a href="https://carbondesignsystem.com/" target="_blank" class="ds-card dynamic-hover reveal delay-4">
+                    <div class="ds-header">
+                        <div class="ds-logo" style="background:#0F62FE;color:#fff;border-color:#0F62FE;">C</div>
+                        <h3 data-i18n="library_card_3_title">Carbon (IBM)</h3>
+                    </div>
+                    <div class="ds-content">
+                        <p data-i18n="library_card_3_description">O clássico sistema de governança modular que guia
+                            todos os hardwares e softwares Cloud da
+                            IBM.</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="reveal" style="text-align: center; margin-top: 60px;">
+                <a href="https://github.com/alexpate/awesome-design-systems" target="_blank" class="btn btn-secondary">
+                    <svg fill="currentColor" viewBox="0 0 256 256">
+                        <path
+                            d="M128,24A104,104,0,0,0,95.06,226.71c5.2,1,7.11-2.25,7.11-5s-.09-9-.14-17.65c-28.94,6.29-35-13.93-35-13.93-4.73-12-11.55-15.22-11.55-15.22-9.45-6.45,.71-6.32,.71-6.32,10.43,.73,15.93,10.72,15.93,10.72,9.27,15.89,24.31,11.3,30.25,8.64,1-6.72,3.64-11.3,6.54-13.9-23.1-2.63-47.41-11.56-47.41-51.46,0-11.37,4.06-20.67,10.74-27.95-1.07-2.63-4.66-13.22,1-27.56,0,0,8.75-2.8,28.66,10.68,8.32-2.31,17.22-3.47,26.06-3.51,8.83,.04,17.74,1.2,26.07,3.51,19.89-13.48,28.63-10.68,28.63-10.68,5.69,14.34,2.1,24.93,1.02,27.56,6.7,7.28,10.72,16.58,10.72,27.95,0,39.99-24.36,48.81-47.53,51.38,3.74,3.22,7.07,9.58,7.07,19.3,0,13.95-.13,25.17-.13,28.59,0,2.77,1.87,6.04,7.16,5.01A104,104,0,0,0,128,24Z">
+                        </path>
+                    </svg>
+                    <span data-i18n="library_github_btn">Ver o diretório Github completo</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Job Board Preview 
+    <section id="jobs" class="section jobs-section">
+        <div class="container layout-centered reveal">
+            <div class="jobs-info">
+                <h2>Jobs</h2>
+                <p>Espaço colaborativo para divulgarmos vagas abertas. <br />Se seu time está buscando pessoas ou você
+                    está buscando um novo desafio, a comunidade fortalece essa ponte.</p>
+
+                <div style="display: flex; gap: 15px; flex-wrap: wrap; margin-top: 30px; justify-content: center;">
+                    <a href="#" class="btn btn-secondary">
+                        Todas as vagas (Em breve)
+                    </a>
+                    <a href="#" class="btn btn-primary">
+                        <svg fill="currentColor" viewBox="0 0 256 256">
+                            <path
+                                d="M227.32,28.68a16,16,0,0,0-15.66-4.08l-176,51.85a16,16,0,0,0-1.27,29.83l66.5,29.35,39,83a16,16,0,0,0,14.47,9.31h1A15.86,15.86,0,0,0,170,214l59.61-170A16,16,0,0,0,227.32,28.68ZM156.41,185.39,122.9,114.12l53.4-53.4a8,8,0,0,0-11.31-11.31L111.58,102.8,40.31,71.42l155-45.67Z">
+                            </path>
+                        </svg>
+                        Enviar uma vaga
+                    </a>
+                </div>
+            </div>
+
+            <div class="jobs-list" style="width: 100%; margin-top: 20px;">
+                <a href="job-details" class="job-item featured dynamic-hover"
+                    style="border-left: 4px solid var(--accent-color); padding-right: 20px; text-decoration: none;">
+                    <div class="job-company-logo" style="background:#000;color:#fff;">U</div>
+                    <div class="job-meta">
+                        <h3 style="color: var(--text-primary);">Senior Design System Engineer</h3>
+                        <span class="company">Uber • São Paulo (Híbrido)</span>
+                        <div class="job-tags" style="display: flex; gap: 8px; margin-top: 10px;">
+                            <span
+                                style="background: rgba(255,255,255,0.1); color: #fff; padding: 4px 8px; border-radius: 4px; font-size: 0.75rem;">React</span>
+                            <span
+                                style="background: rgba(255,255,255,0.1); color: #fff; padding: 4px 8px; border-radius: 4px; font-size: 0.75rem;">Figma
+                                API</span>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="#" class="job-item dynamic-hover" style="text-decoration: none;">
+                    <div class="job-company-logo" style="background:#ea1d2c;color:#fff;border-color:#ea1d2c;">I</div>
+                    <div class="job-meta">
+                        <h3 style="color: var(--text-primary);">Design Ops Lead</h3>
+                        <span class="company">iFood • Remoto (BR)</span>
+                        <div class="job-tags" style="display: flex; gap: 8px; margin-top: 10px;">
+                            <span
+                                style="background: rgba(255,255,255,0.1); color: #fff; padding: 4px 8px; border-radius: 4px; font-size: 0.75rem;">Design
+                                Ops</span>
+                            <span
+                                style="background: rgba(255,255,255,0.1); color: #fff; padding: 4px 8px; border-radius: 4px; font-size: 0.75rem;">Gestão</span>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="#" class="job-item dynamic-hover" style="text-decoration: none;">
+                    <div class="job-company-logo" style="background:#fff;color:#eddf25;border-color:#fff;">M</div>
+                    <div class="job-meta">
+                        <h3 style="color: var(--text-primary);">Manager, Design Ops</h3>
+                        <span class="company">Mercado Livre • Florianópolis</span>
+                        <div class="job-tags" style="display: flex; gap: 8px; margin-top: 10px;">
+                            <span
+                                style="background: rgba(255,255,255,0.1); color: #fff; padding: 4px 8px; border-radius: 4px; font-size: 0.75rem;">Liderança</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>-->
+
+    <section id="content" class="section content-section">
+        <div class="container reveal">
+            <div class="section-header center">
+                <div class="badge fade-up" data-i18n="content_badge">✦ Primeiro encontro presencial ✦</div>
+                <h2 data-i18n="content_events_title">Eventos presenciais</h2>
+
+            </div>
+
+            <div class="talk-showcase dynamic-hover" style="text-align: left;">
+                <div class="talk-video abstract-content-art">
+                    <button class="play-btn" style="z-index: 10;">▶</button>
+                </div>
+                <div class="talk-info">
+                    <div class="talk-meta"
+                        style="display: flex; gap: 15px; font-size: 0.875rem; color: var(--text-secondary);">
+                        <span class="date" data-i18n="content_event_date">20 Jun 2024</span>
+                        <span class="talk-tag" data-i18n="content_event_location">Local: À definir</span>
+                    </div>
+                    <h3 data-i18n="content_event_title">Primeiro encontro presencial da comunidade</h3>
+                    <p data-i18n="content_event_description">Um encontro leve para nos conhecermos, trocar ideias e
+                        fortalecer a comunidade. Aberto para
+                        profissionais de produto, desenvolvimento e áreas relacionadas.</p>
+                    <!-- <div class="speaker">
+                        <div class="avatar small"></div>
+                        <span><strong>Matt</strong>, Product Designer.</span>
+                    </div>-->
+                    <a href="https://luma.com/tvkhbenq" target="_blank" class="btn-text" style="width: fit-content;"
+                        data-i18n="content_event_btn">Marque sua presença</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="plugin" class="section plugin-section">
+        <div class="container layout-asymmetric">
+            <div class="mission-image-wrapper reveal left"
+                style="display: flex; align-items: center; justify-content: center; width: 100%;">
+                <div class="abstract-content-art" style="width: 100%; height: 320px; border-radius: var(--radius-lg); background: linear-gradient(135deg, #1a1a1a, #000); display: flex; align-items: center; justify-content: center; border: var(--border-subtle);">
+                    <img src="assets/logos/LOGO-ICON-WHITE.png" alt="Plugin Icon" style="width: 120px; height: auto; opacity: 0.8;">
+                </div>
+            </div>
+            <div class="mission-text reveal right">
+                <div class="badge" data-i18n="plugin_subtitle">O Plugin oficial da nossa comunidade</div>
+                <h2 data-i18n="plugin_title">Design System Analyze</h2>
+                <p data-i18n="plugin_description">Analise seu Design System, identifique falhas de acessibilidade, inconsistências e exporte tokens no formato Tokens Studio (JSON) com apenas um clique.</p>
+                <div class="cta-group" style="justify-content: flex-start; margin-top: 30px;">
+                    <a href="https://www.figma.com/community/plugin/1351658428172036494" target="_blank" class="btn btn-primary" data-i18n="plugin_btn">
+                        Instalar no Figma
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="join" class="section strip-section">
+        <div class="strip-bg"></div>
+        <div class="container reveal relative z-10 layout-centered">
+            <h2 data-i18n="join_title">Venha fazer parte da comunidade</h2>
+            <p style="margin: 15px 0 0; max-width: 650px;" data-i18n="join_description">Um espaço para pessoas
+                interessadas em design de produto e
+                desenvolvimento trocarem experiências, tirarem dúvidas e evoluírem juntas. Participe da comunidade no
+                Discord e acompanhe nossos conteúdos pela newsletter semanal na Substack.</p>
+
+            <div class="cta-group" style="margin-top: 60px; margin-bottom: 0;">
+                <a href="https://discord.gg/EjxdKtSK89" target="_blank" class="btn btn-primary">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"
+                        style="width: 20px; height: 20px; fill: currentColor; margin-right: 8px;">
+                        <path
+                            d="M524.5 133.8C524.3 133.5 524.1 133.2 523.7 133.1C485.6 115.6 445.3 103.1 404 96C403.6 95.9 403.2 96 402.9 96.1C402.6 96.2 402.3 96.5 402.1 96.9C396.6 106.8 391.6 117.1 387.2 127.5C342.6 120.7 297.3 120.7 252.8 127.5C248.3 117 243.3 106.8 237.7 96.9C237.5 96.6 237.2 96.3 236.9 96.1C236.6 95.9 236.2 95.9 235.8 95.9C194.5 103 154.2 115.5 116.1 133C115.8 133.1 115.5 133.4 115.3 133.7C39.1 247.5 18.2 358.6 28.4 468.2C28.4 468.5 28.5 468.7 28.6 469C28.7 469.3 28.9 469.4 29.1 469.6C73.5 502.5 123.1 527.6 175.9 543.8C176.3 543.9 176.7 543.9 177 543.8C177.3 543.7 177.7 543.4 177.9 543.1C189.2 527.7 199.3 511.3 207.9 494.3C208 494.1 208.1 493.8 208.1 493.5C208.1 493.2 208.1 493 208 492.7C207.9 492.4 207.8 492.2 207.6 492.1C207.4 492 207.2 491.8 206.9 491.7C191.1 485.6 175.7 478.3 161 469.8C160.7 469.6 160.5 469.4 160.3 469.2C160.1 469 160 468.6 160 468.3C160 468 160 467.7 160.2 467.4C160.4 467.1 160.5 466.9 160.8 466.7C163.9 464.4 167 462 169.9 459.6C170.2 459.4 170.5 459.2 170.8 459.2C171.1 459.2 171.5 459.2 171.8 459.3C268 503.2 372.2 503.2 467.3 459.3C467.6 459.2 468 459.1 468.3 459.1C468.6 459.1 469 459.3 469.2 459.5C472.1 461.9 475.2 464.4 478.3 466.7C478.5 466.9 478.7 467.1 478.9 467.4C479.1 467.7 479.1 468 479.1 468.3C479.1 468.6 479 468.9 478.8 469.2C478.6 469.5 478.4 469.7 478.2 469.8C463.5 478.4 448.2 485.7 432.3 491.6C432.1 491.7 431.8 491.8 431.6 492C431.4 492.2 431.3 492.4 431.2 492.7C431.1 493 431.1 493.2 431.1 493.5C431.1 493.8 431.2 494 431.3 494.3C440.1 511.3 450.1 527.6 461.3 543.1C461.5 543.4 461.9 543.7 462.2 543.8C462.5 543.9 463 543.9 463.3 543.8C516.2 527.6 565.9 502.5 610.4 469.6C610.6 469.4 610.8 469.2 610.9 469C611 468.8 611.1 468.5 611.1 468.2C623.4 341.4 590.6 231.3 524.2 133.7zM222.5 401.5C193.5 401.5 169.7 374.9 169.7 342.3C169.7 309.7 193.1 283.1 222.5 283.1C252.2 283.1 275.8 309.9 275.3 342.3C275.3 375 251.9 401.5 222.5 401.5zM417.9 401.5C388.9 401.5 365.1 374.9 365.1 342.3C365.1 309.7 388.5 283.1 417.9 283.1C447.6 283.1 471.2 309.9 470.7 342.3C470.7 375 447.5 401.5 417.9 401.5z" />
+                    </svg>
+                    <span data-i18n="join_discord_btn">Entrar no Discord da comunidade</span>
+                </a>
+                <a href="https://figmatt.substack.com/" target="_blank" rel="noopener noreferrer"
+                    class="btn btn-secondary"
+                    style="border-radius: 100px; display: inline-flex; align-items: center; justify-content: center; padding: 15px 30px; font-weight: 400; font-size: 1rem; cursor: pointer; transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1); background: rgba(255, 255, 255, 0.05); color: var(--text-primary); border: 1px solid rgba(255, 255, 255, 0.08); backdrop-filter: blur(10px);"
+                    data-i18n="join_newsletter_btn">
+                    Acessar a Newsletter
+                </a>
+                <a href="https://buymeacoffee.com/dsbrcommunity" target="_blank" rel="noopener noreferrer"
+                    class="btn btn-secondary"
+                    style="border-radius: 100px; display: inline-flex; align-items: center; justify-content: center; padding: 15px 30px; font-weight: 400; font-size: 1rem; cursor: pointer; transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1); background: rgba(255, 255, 255, 0.05); color: var(--text-primary); border: 1px solid rgba(255, 255, 255, 0.08); backdrop-filter: blur(10px);"
+                    data-i18n="bmac_btn">
+                    Buy me a coffee
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <a href="#" class="logo" style="display: block; margin-bottom: 20px; text-decoration: none;">
+                    <img src="assets/logos/LOGO-DSBR-white.png" alt="DSBr Logo"
+                        style="height: 50px; width: auto; display: block;">
+                </a>
+                <p style="color: var(--text-secondary); line-height: 1.6; font-size: 1rem; margin-bottom: 25px;"
+                    data-i18n="footer_description">
+
+                    Um espaço para profissionais de produto, design e desenvolvimento trocarem experiências reais,
+                    resolverem desafios práticos e evoluírem Design Systems que funcionam em escala.
+                </p>
+
+                <!-- <div class="custom-lang-switcher" id="footerLangSwitcher">
+                    <div class="lang-current">
+                        <span class="current-flag">🇧🇷</span>
+                        <span class="current-text">PT</span>
+                    </div>
+                    <div class="lang-dropdown">
+                        <div class="lang-option active" data-value="pt">
+                            <span>🇧🇷</span> PT
+                        </div>
+                        <div class="lang-option" data-value="en">
+                            <span>🇺🇸</span> EN
+                        </div>
+                    </div>
+                </div> -->
+                <div class="footer-socials" style="display: flex; gap: 15px;">
+                    <a href="https://www.linkedin.com/in/matheus-de-souza-francisco/" target="_blank"
+                        aria-label="LinkedIn"
+                        style="color: var(--text-secondary); width: 40px; height: 40px; border-radius: 50%; background: rgba(255,255,255,0.05); display: flex; align-items: center; justify-content: center; transition: all 0.3s ease;"
+                        onmouseover="this.style.background='rgba(255,255,255,0.1)'; this.style.color='var(--text-primary)';"
+                        onmouseout="this.style.background='rgba(255,255,255,0.05)'; this.style.color='var(--text-secondary)';">
+                        <svg width="20" height="20" fill="currentColor" viewBox="0 0 256 256">
+                            <path
+                                d="M216,24H40A16,16,0,0,0,24,40V216a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V40A16,16,0,0,0,216,24Zm-16,40a20,20,0,1,1-20-20A20,20,0,0,1,200,64Zm0,136H168V140c0-14.77-9.5-20-16-20s-16,5.23-16,20v60H104V96h32v17.41a38.45,38.45,0,0,1,28-13.41c19.86,0,36,13.68,36,43.2V200ZM72,200H40V96H72Z">
+                            </path>
+                        </svg>
+                    </a>
+                    <a href="https://www.instagram.com/figmatt.design/" target="_blank" aria-label="Instagram"
+                        style="color: var(--text-secondary); width: 40px; height: 40px; border-radius: 50%; background: rgba(255,255,255,0.05); display: flex; align-items: center; justify-content: center; transition: all 0.3s ease;"
+                        onmouseover="this.style.background='rgba(255,255,255,0.1)'; this.style.color='var(--text-primary)';"
+                        onmouseout="this.style.background='rgba(255,255,255,0.05)'; this.style.color='var(--text-secondary)';">
+                        <svg width="20" height="20" fill="currentColor" viewBox="0 0 256 256">
+                            <path
+                                d="M128,80a48,48,0,1,0,48,48A48.05,48.05,0,0,0,128,80Zm0,80a32,32,0,1,1,32-32A32,32,0,0,1,128,160ZM176,24H80A56.06,56.06,0,0,0,24,80v96a56.06,56.06,0,0,0,56,56h96a56.06,56.06,0,0,0,56-56V80A56.06,56.06,0,0,0,176,24Zm40,152a40,40,0,0,1-40,40H80a40,40,0,0,1-40-40V80A40,40,0,0,1,80,40h96a40,40,0,0,1,40,40ZM192,76a12,12,0,1,1-12-12A12,12,0,0,1,192,76Z">
+                            </path>
+                        </svg>
+                    </a>
+                    <a href="https://www.youtube.com/@dsbr.design" target="_blank" aria-label="YouTube"
+                        style="color: var(--text-secondary); width: 40px; height: 40px; border-radius: 50%; background: rgba(255,255,255,0.05); display: flex; align-items: center; justify-content: center; transition: all 0.3s ease;"
+                        onmouseover="this.style.background='rgba(255,255,255,0.1)'; this.style.color='var(--text-primary)';"
+                        onmouseout="this.style.background='rgba(255,255,255,0.05)'; this.style.color='var(--text-secondary)';">
+                        <svg width="20" height="20" fill="currentColor" viewBox="0 0 256 256">
+                            <path
+                                d="M164.44,121.34l-48-32A8,8,0,0,0,104,96v64a8,8,0,0,0,12.44,6.66l48-32a8,8,0,0,0,0-13.32ZM120,145.05V111l25.58,17ZM234.33,69.52a24,24,0,0,0-14.49-16.4C185.56,39.88,131,40,128,40s-57.56-.12-91.84,13.15a24,24,0,0,0-14.49,16.4C19.86,76.62,16,102.57,16,128s3.86,51.38,5.67,58.48a24,24,0,0,0,14.49,16.41C69.48,216,125.13,216,128,216s58.52,0,91.84-13.11a24,24,0,0,0,14.49-16.41C236.14,179.38,240,153.43,240,128S236.14,76.62,234.33,69.52ZM218.83,182.5A8,8,0,0,1,214,188c-30.86,11.83-84.34,12-86,12s-55.12-.13-86-12a8,8,0,0,1-4.83-5.46C35.53,176.62,32,152.05,32,128s3.53-48.62,5.13-54.54A8,8,0,0,1,42,68c30.86-11.83,84.34-12,86-12s55.12,.13,86,12a8,8,0,0,1,4.83,5.46C220.47,79.38,224,103.95,224,128S220.47,176.62,218.83,182.5Z">
+                            </path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-links">
+                <div class="link-col">
+                    <h4 data-i18n="footer_col_1_title">Comunidade</h4>
+                    <a href="#" data-i18n="footer_col_1_link_1">Código de Conduta</a>
+                    <a href="#" data-i18n="footer_col_1_link_2">Manifesto DSBr</a>
+                    <a href="#" data-i18n="footer_col_1_link_3">Governança</a>
+                    <a href="#" data-i18n="footer_col_1_link_4">Patrocinadores</a>
+                    <a href="#" data-i18n="footer_col_1_link_5">Gumroad</a>
+                </div>
+                <div class="link-col">
+                    <h4 data-i18n="footer_col_2_title">Ecossistema</h4>
+                    <a href="#" data-i18n="footer_col_2_link_1">Galeria</a>
+                    <a href="#" data-i18n="footer_col_2_link_2">Jobs (Em breve)</a>
+                    <a href="#" data-i18n="footer_col_2_link_3">Newsletter </a>
+                    <a href="#" data-i18n="footer_col_2_link_4">Propor Palestra</a>
+                </div>
+                <div class="link-col">
+                    <h4 data-i18n="footer_col_3_title">Social</h4>
+                    <a href="https://discord.gg/EjxdKtSK89" target="_blank" data-i18n="footer_col_3_link_1">Discord
+                        Community</a>
+                    <a href="https://www.linkedin.com/in/matheus-de-souza-francisco/" target="_blank"
+                        data-i18n="footer_col_3_link_2">LinkedIn </a>
+                    <a href="https://www.instagram.com/figmatt.design/" target="_blank"
+                        data-i18n="footer_col_3_link_3">Instagram</a>
+                    <a href="https://www.youtube.com/@dsbr.design" target="_blank"
+                        data-i18n="footer_col_3_link_4">YouTube</a>
+                    <a href="https://open.spotify.com/playlist/3YJl6BQey0hCfYLOIGNHfm?si=24bc56969a5d4913"
+                        target="_blank" data-i18n="footer_col_3_link_5">Spotify</a>
+                </div>
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            <p data-i18n="footer_copyright">&copy; 2026 DSBr Community. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
